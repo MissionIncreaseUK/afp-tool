@@ -1,0 +1,3727 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annual Fundraising Plan Tool | Mission Increase UK</title>
+<meta name="description" content="Seven steps to a written fundraising plan, rooted in Mi's Transformational Giving approach. Your entries stay on your device.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #f5f7f8; }
+  @media print { html, body { background: #fff; } #printBlockedMsg { display: none !important; } }
+</style>
+</head>
+<body class="slug-afp-tool">
+<section>
+<style>
+        :root {
+            --mi-green: #82bc00;
+            --mi-green-soft: #f1f7e1;
+            --mi-green-line: #cfe39a;
+            --mi-blue-dark: #323e48;
+            --ink: #323e48;
+            --muted: #6b7680;
+            --line: #e3e7ea;
+            --card: #ffffff;
+            --bg: #f5f7f8;
+            --auto: #eef6da;
+            --font-head: 'Montserrat', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --font-body: 'Open Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --radius: 14px;
+            --shadow: 0 1px 2px rgba(50, 62, 72, .06), 0 6px 18px rgba(50, 62, 72, .06);
+        }
+
+        .wrap,
+        .wrap * {
+            box-sizing: border-box
+        }
+
+        .wrap {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 28px 20px 64px;
+            font-family: var(--font-body);
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased
+        }
+
+        header.masthead {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 18px
+        }
+
+        .title-block h1 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            letter-spacing: -.01em;
+            font-size: 28px;
+            margin: 0 0 4px;
+            color: var(--mi-blue-dark)
+        }
+
+        .title-block p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14.5px;
+            max-width: 62ch
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+            display: block;
+            background: #fff;
+            border-radius: 6px
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            box-shadow: var(--shadow);
+            margin-bottom: 16px
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 5px
+        }
+
+        .field label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .04em
+        }
+
+        .field input {
+            font-family: var(--font-body);
+            font-size: 15px;
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            padding: 9px 11px;
+            background: #fff;
+            min-width: 200px
+        }
+
+        .field input:focus {
+            outline: none;
+            border-color: var(--mi-green);
+            box-shadow: 0 0 0 3px var(--mi-green-soft)
+        }
+
+        .toolbar .spacer {
+            flex: 1 1 40px
+        }
+
+        .btn {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            padding: 11px 18px;
+            background: var(--mi-blue-dark);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform .05s, background .15s
+        }
+
+        .btn:hover {
+            background: #283139
+        }
+
+        .btn:active {
+            transform: translateY(1px)
+        }
+
+        .btn svg {
+            width: 16px;
+            height: 16px
+        }
+
+        .btn.alt {
+            background: #fff;
+            color: var(--mi-blue-dark);
+            border: 1px solid var(--line)
+        }
+
+        .btn.alt:hover {
+            background: #f3f6f7;
+            border-color: var(--mi-green-line)
+        }
+
+        .io-msg {
+            font-size: 12.5px;
+            color: #5f8a00;
+            font-weight: 600;
+            align-self: center
+        }
+
+        .tabs {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 18px;
+            border-bottom: 2px solid var(--line)
+        }
+
+        .tab {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: var(--muted);
+            padding: 12px 20px;
+            border-radius: 10px 10px 0 0;
+            position: relative;
+            top: 2px
+        }
+
+        .tab:hover {
+            color: var(--mi-blue-dark)
+        }
+
+        .tab.active {
+            color: var(--mi-blue-dark);
+            border-bottom: 3px solid var(--mi-green)
+        }
+
+        .panel {
+            display: none
+        }
+
+        .panel.active {
+            display: block
+        }
+
+        .panel-intro {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 18px
+        }
+
+        .panel-intro p {
+            margin: 0;
+            font-size: 14.5px;
+            color: #4a555e
+        }
+
+        .panel-intro strong {
+            color: var(--mi-blue-dark)
+        }
+
+        /* PEO bits */
+        .progress-wrap {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 13px 16px;
+            box-shadow: var(--shadow);
+            margin-bottom: 16px
+        }
+
+        .progress-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 7px
+        }
+
+        .progress-top .count {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 15px;
+            color: var(--mi-blue-dark)
+        }
+
+        .progress-top .lbl {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .bar {
+            height: 9px;
+            border-radius: 99px;
+            background: #eceff1;
+            overflow: hidden
+        }
+
+        .bar>span {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: var(--mi-green);
+            border-radius: 99px;
+            transition: width .25s
+        }
+
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 14px
+        }
+
+        .legend .key {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-top: 3px solid var(--mi-green);
+            border-radius: 12px;
+            padding: 13px 15px;
+            box-shadow: var(--shadow)
+        }
+
+        .legend .key h4 {
+            font-family: var(--font-head);
+            margin: 0 0 3px;
+            font-size: 14px;
+            color: var(--mi-blue-dark)
+        }
+
+        .legend .key p {
+            margin: 0;
+            font-size: 12.5px;
+            color: var(--muted)
+        }
+
+        .chart {
+            display: grid;
+            grid-template-columns: minmax(150px, .8fr) repeat(3, 1fr);
+            gap: 10px;
+            align-items: stretch
+        }
+
+        .col-head {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 14px;
+            color: #fff;
+            background: var(--mi-green);
+            border-radius: 10px;
+            padding: 11px 14px;
+            text-align: center;
+            letter-spacing: .02em
+        }
+
+        .corner {
+            background: transparent
+        }
+
+        .row-head {
+            background: var(--mi-blue-dark);
+            color: #fff;
+            border-radius: 10px;
+            padding: 13px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .row-head .name {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 16px
+        }
+
+        .row-head .q {
+            font-size: 11.5px;
+            color: #c9d2d8;
+            margin-top: 5px;
+            line-height: 1.35
+        }
+
+        .cell-peo {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 11px 11px 8px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            min-height: 108px
+        }
+
+        .stage-tag {
+            display: none
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        .step input {
+            flex: 1;
+            font-family: var(--font-body);
+            font-size: 13.5px;
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 8px 9px;
+            background: #fff;
+            width: 100%
+        }
+
+        .step input::placeholder {
+            color: #aab3b9;
+            font-style: italic
+        }
+
+        .step input:focus {
+            outline: none;
+            border-color: var(--mi-green);
+            box-shadow: 0 0 0 3px var(--mi-green-soft)
+        }
+
+        .rm {
+            border: none;
+            background: #f1f3f4;
+            color: #8a949b;
+            width: 26px;
+            height: 26px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1;
+            flex: 0 0 auto
+        }
+
+        .rm:hover {
+            background: #fbe6e6;
+            color: #c0392b
+        }
+
+        .add,
+        .addrow {
+            align-self: flex-start;
+            border: 1px dashed var(--mi-green-line);
+            background: var(--mi-green-soft);
+            color: #5f8a00;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 12px;
+            border-radius: 8px;
+            padding: 6px 10px;
+            cursor: pointer
+        }
+
+        .add {
+            margin-top: auto
+        }
+
+        .addrow {
+            margin-top: 10px
+        }
+
+        .add:hover,
+        .addrow:hover {
+            background: #e7f1ce
+        }
+
+        .print-value {
+            display: none;
+            font-size: 13px;
+            color: var(--ink);
+            padding: 3px 0;
+            white-space: pre-wrap
+        }
+
+        /* Step navigation */
+        .stepnav {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            margin-bottom: 16px
+        }
+
+        .stepbtn {
+            flex: 0 0 auto;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--muted);
+            padding: 9px 13px;
+            border-radius: 9px;
+            white-space: nowrap
+        }
+
+        .stepbtn:hover {
+            border-color: var(--mi-green-line);
+            color: var(--mi-blue-dark)
+        }
+
+        .stepbtn.active {
+            background: var(--mi-blue-dark);
+            color: #fff;
+            border-color: var(--mi-blue-dark)
+        }
+
+        .substep {
+            display: none
+        }
+
+        .substep.active {
+            display: block
+        }
+
+        .section {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 22px;
+            box-shadow: var(--shadow);
+            margin-bottom: 16px
+        }
+
+        .section h2 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 20px;
+            margin: 0 0 4px;
+            color: var(--mi-blue-dark)
+        }
+
+        .instructions {
+            font-size: 13px;
+            color: var(--muted);
+            white-space: pre-line;
+            margin: 0 0 16px;
+            padding: 12px 14px;
+            background: #fafbfb;
+            border-left: 3px solid var(--mi-green);
+            border-radius: 0 8px 8px 0
+        }
+
+        .parttitle {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 15px;
+            color: var(--mi-blue-dark);
+            margin: 18px 0 4px
+        }
+
+        .prayer {
+            font-size: 13px;
+            color: var(--muted);
+            font-style: italic;
+            margin: 0 0 12px
+        }
+
+        .blk {
+            margin-bottom: 14px
+        }
+
+        .blk>label {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--mi-blue-dark);
+            margin-bottom: 5px
+        }
+
+        .blk .ex {
+            font-size: 12px;
+            color: #9aa3a9;
+            font-style: italic;
+            margin: 2px 0 6px
+        }
+
+        input.field-in,
+        textarea.field-in,
+        select.field-in,
+        .blk input[type=text],
+        .blk textarea {
+            font-family: var(--font-body);
+            font-size: 14px;
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            padding: 9px 11px;
+            background: #fff;
+            width: 100%
+        }
+
+        .blk textarea,
+        textarea.field-in {
+            min-height: 64px;
+            resize: vertical;
+            line-height: 1.5
+        }
+
+        .field-in:focus,
+        .blk input:focus,
+        .blk textarea:focus {
+            outline: none;
+            border-color: var(--mi-green);
+            box-shadow: 0 0 0 3px var(--mi-green-soft)
+        }
+
+        .wrap input::placeholder,
+        .wrap textarea::placeholder {
+            color: #aab3b9;
+            font-style: italic
+        }
+
+        /* rating grid */
+        .ratewrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px
+        }
+
+        .rate-legend {
+            font-size: 12.5px;
+            color: var(--muted);
+            margin-bottom: 12px;
+            font-weight: 600
+        }
+
+        .rate-strat {
+            margin-bottom: 14px
+        }
+
+        .rate-title {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 13px;
+            color: #fff;
+            background: var(--mi-blue-dark);
+            padding: 7px 11px;
+            border-radius: 8px;
+            letter-spacing: .02em
+        }
+
+        .rate-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: space-between;
+            padding: 7px 4px;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .rate-label {
+            font-size: 13.5px;
+            color: var(--ink)
+        }
+
+        .rate {
+            flex: 0 0 76px;
+            font-family: var(--font-body);
+            font-size: 13px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 6px;
+            background: #fff;
+            text-align: center;
+            font-weight: 700
+        }
+
+        .rate[data-v="0"] {
+            background: #fde7e7;
+            border-color: #f3b9b9
+        }
+
+        .rate[data-v="1"] {
+            background: #fdf1dd;
+            border-color: #f0d6a3
+        }
+
+        .rate[data-v="2"] {
+            background: #eef6da;
+            border-color: var(--mi-green-line)
+        }
+
+        .rate[data-v="3"] {
+            background: #dcefb4;
+            border-color: var(--mi-green)
+        }
+
+        /* data tables — built as CSS grid, not <table>. LW applies its own layout/JS
+     to real <table> elements and repeatedly resized header and body cells
+     independently of each other no matter how widths were declared. A grid
+     has one shared column track list for every cell (header and body alike),
+     so there's no separate layout context left for that to happen in. */
+        .tablewrap {
+            overflow-x: auto;
+            margin-bottom: 8px
+        }
+
+        .dt {
+            display: grid;
+            width: 100%;
+            min-width: 560px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            overflow: hidden
+        }
+
+        .dt .tr {
+            display: contents
+        }
+
+        .dt .th,
+        .dt .td {
+            border-bottom: 1px solid var(--line);
+            border-right: 1px solid var(--line);
+            padding: 9px 8px;
+            display: flex;
+            align-items: center
+        }
+
+        .dt .th:last-child,
+        .dt .td:last-child {
+            border-right: none
+        }
+
+        .dt .tr:last-child .th,
+        .dt .tr:last-child .td {
+            border-bottom: none
+        }
+
+        .dt .th {
+            font-family: var(--font-head);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .03em;
+            color: #fff;
+            background: var(--mi-green);
+            font-weight: 800
+        }
+
+        .dt .th.num,
+        .dt .td.num {
+            justify-content: flex-end;
+            text-align: right
+        }
+
+        .dt .td {
+            padding: 5px 7px
+        }
+
+        .dt .rowlabel {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--mi-blue-dark);
+            white-space: nowrap
+        }
+
+        .dt .rowlabel.small {
+            font-weight: 400;
+            color: var(--ink);
+            white-space: normal;
+            min-width: 230px
+        }
+
+        .dt input.cell {
+            width: 100%;
+            min-width: 78px;
+            font-family: var(--font-body);
+            font-size: 13px;
+            border: 1px solid var(--line);
+            border-radius: 7px;
+            padding: 6px 7px;
+            text-align: right;
+            background: #fff
+        }
+
+        .dwrap {
+            position: relative;
+            display: block
+        }
+
+        .dwrap::before {
+            content: "£";
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: 13px;
+            pointer-events: none
+        }
+
+        .dwrap input {
+            padding-left: 18px !important
+        }
+
+        .dt input.cell:focus {
+            outline: none;
+            border-color: var(--mi-green);
+            box-shadow: 0 0 0 2px var(--mi-green-soft)
+        }
+
+        .dt .auto {
+            background: var(--auto);
+            font-weight: 700;
+            color: var(--mi-blue-dark);
+            text-align: right;
+            font-size: 13px;
+            white-space: nowrap;
+            justify-content: flex-end
+        }
+
+        .dt .bench {
+            color: var(--muted);
+            text-align: right;
+            font-size: 12.5px;
+            white-space: nowrap;
+            justify-content: flex-end
+        }
+
+        .dt .totalrow .td {
+            background: #eaeef0;
+            font-family: var(--font-head);
+            font-weight: 800;
+            color: var(--mi-blue-dark);
+            white-space: nowrap
+        }
+
+        .dt .grouprow .td {
+            background: #eef3f0;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 12px;
+            color: var(--mi-blue-dark);
+            text-transform: uppercase;
+            letter-spacing: .02em
+        }
+
+        .autonote {
+            font-size: 12px;
+            color: #5f8a00;
+            margin: 4px 0 14px
+        }
+
+        .autonote b {
+            font-weight: 700
+        }
+
+        .dt .td .sname {
+            width: 100%;
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--mi-blue-dark);
+            border: 1px dashed var(--mi-green-line);
+            border-radius: 7px;
+            padding: 6px 8px;
+            background: #fff
+        }
+
+        .dt .td .sname:focus {
+            outline: none;
+            border-color: var(--mi-green);
+            box-shadow: 0 0 0 2px var(--mi-green-soft)
+        }
+
+        .dt-income .rowlabel,
+        .dt-financial .rowlabel,
+        .dt-cashflow .rowlabel,
+        .dt-wpgoals .rowlabel {
+            white-space: normal;
+            overflow-wrap: anywhere
+        }
+
+        /* tooltips */
+        .tip-wrap {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 6px;
+            vertical-align: middle
+        }
+
+        .tip-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #00a0b6;
+            color: #fff;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 10px;
+            cursor: help;
+            line-height: 1
+        }
+
+        .tip-box {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: calc(100% + 8px);
+            background: var(--mi-blue-dark);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 12.5px;
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: normal;
+            line-height: 1.5;
+            padding: 10px 12px;
+            border-radius: 8px;
+            width: 240px;
+            box-shadow: var(--shadow);
+            z-index: 20
+        }
+
+        .tip-wrap:hover .tip-box,
+        .tip-wrap:focus-within .tip-box {
+            display: block
+        }
+
+        .tip-icon:focus {
+            outline: 2px solid var(--mi-green);
+            outline-offset: 2px
+        }
+
+        /* help block */
+        .help-block {
+            background: var(--mi-green-soft);
+            border: 1px solid var(--mi-green-line);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-top: 26px
+        }
+
+        .help-block h3 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 15px;
+            color: var(--mi-blue-dark);
+            margin: 0 0 8px
+        }
+
+        .help-block p {
+            font-size: 13.5px;
+            color: #4a555e;
+            margin: 0 0 8px;
+            line-height: 1.6
+        }
+
+        .help-block p:last-child {
+            margin-bottom: 0
+        }
+
+        .help-block ol,
+        .help-block ul {
+            font-size: 13.5px;
+            color: #4a555e;
+            margin: 0 0 8px;
+            padding-left: 22px;
+            line-height: 1.6
+        }
+
+        /* pct flags */
+        .pctflag {
+            font-weight: 700
+        }
+
+        .pctflag.good {
+            color: #5f8a00
+        }
+
+        .pctflag.warn {
+            color: #c0392b
+        }
+
+        /* Per-table column tracks. One shared definition per table drives both
+     header and body cells since they're all grid items of the same container. */
+        .dt-metrics {
+            grid-template-columns: 70% 30%
+        }
+
+        .dt-income {
+            grid-template-columns: 20% 15% 15% 15% 17% 18%
+        }
+
+        .dt-giving {
+            grid-template-columns: 40% 15% 15% 15% 15%
+        }
+
+        .dt-financial {
+            grid-template-columns: 14% 12% 13% 12% 10% 24% 15%
+        }
+
+        .dt-cashflow {
+            grid-template-columns: 16% 12% 12% 12% 12% 18% 18%
+        }
+
+        .dt-calendar {
+            grid-template-columns: 12% 44% 44%
+        }
+
+        .dt-wpgoals {
+            grid-template-columns: 30% 25% 25% 20%
+        }
+
+        /* calendar + metrics */
+        .dt textarea.cell {
+            width: 100%;
+            min-width: 140px;
+            font-family: var(--font-body);
+            font-size: 12.5px;
+            border: 1px solid var(--line);
+            border-radius: 7px;
+            padding: 6px 7px;
+            background: #fff;
+            resize: vertical;
+            min-height: 44px;
+            text-align: left
+        }
+
+        .metrichead {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 4px;
+            padding-right: 34px
+        }
+
+        .metrichead span {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .03em;
+            flex: 1
+        }
+
+        .metrichead .grow {
+            flex: 2
+        }
+
+        .mrow {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            margin-bottom: 8px
+        }
+
+        .mrow input,
+        .mrow select {
+            font-family: var(--font-body);
+            font-size: 13px;
+            border: 1px solid var(--line);
+            border-radius: 7px;
+            padding: 7px 8px;
+            background: #fff;
+            flex: 1;
+            width: 100%
+        }
+
+        .mrow .grow {
+            flex: 2
+        }
+
+        .mrow input:focus,
+        .mrow select:focus {
+            outline: none;
+            border-color: var(--mi-green);
+            box-shadow: 0 0 0 2px var(--mi-green-soft)
+        }
+
+        /* step 5 top */
+        .goalcards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 14px
+        }
+
+        .goalcard {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 12px;
+            background: #fafbfb
+        }
+
+        .goalcard h4 {
+            font-family: var(--font-head);
+            font-size: 13px;
+            margin: 0 0 6px;
+            color: var(--mi-blue-dark)
+        }
+
+        .goalcard .gtext {
+            font-size: 13px;
+            color: var(--ink);
+            min-height: 34px;
+            background: var(--auto);
+            border-radius: 6px;
+            padding: 7px 9px;
+            white-space: pre-wrap
+        }
+
+        .goalcard .gdc {
+            font-size: 12px;
+            color: #5f8a00;
+            margin-top: 6px;
+            font-weight: 700
+        }
+
+        .budgetstat {
+            display: inline-block;
+            background: var(--auto);
+            border: 1px solid var(--mi-green-line);
+            border-radius: 10px;
+            padding: 10px 16px;
+            margin-bottom: 14px
+        }
+
+        .budgetstat .v {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--mi-blue-dark)
+        }
+
+        .budgetstat .k {
+            font-size: 11px;
+            color: #5f8a00;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            font-weight: 600
+        }
+
+        .twonotes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 12px
+        }
+
+        /* step 6 */
+        .s6block {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 14px;
+            background: #fafbfb
+        }
+
+        .s6head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .s6name {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 15px;
+            color: var(--mi-blue-dark)
+        }
+
+        .s6tgt {
+            font-size: 12px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            font-weight: 600
+        }
+
+        .s6tgt .money {
+            background: var(--auto);
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-left: 4px
+        }
+
+        .list-headrow {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 4px;
+            padding-right: 34px
+        }
+
+        .list-headrow span {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .03em;
+            flex: 1
+        }
+
+        .list-headrow .grow {
+            flex: 2
+        }
+
+        .frow {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            margin-bottom: 8px
+        }
+
+        .frow textarea,
+        .frow input {
+            font-family: var(--font-body);
+            font-size: 13px;
+            border: 1px solid var(--line);
+            border-radius: 7px;
+            padding: 7px 8px;
+            background: #fff;
+            flex: 1;
+            width: 100%
+        }
+
+        .frow textarea {
+            flex: 2;
+            min-height: 40px;
+            resize: vertical
+        }
+
+        .frow input:focus,
+        .frow textarea:focus {
+            outline: none;
+            border-color: var(--mi-green);
+            box-shadow: 0 0 0 2px var(--mi-green-soft)
+        }
+
+        /* write your plan (printable doc) */
+        .wp-doc h2 {
+            font-family: var(--font-head);
+            font-size: 18px;
+            color: var(--mi-blue-dark);
+            border-bottom: 2px solid var(--mi-green);
+            padding-bottom: 5px;
+            margin: 22px 0 10px
+        }
+
+        .wp-doc h2:first-of-type {
+            margin-top: 6px
+        }
+
+        .wp-label {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            margin: 12px 0 4px
+        }
+
+        .wp-auto {
+            background: var(--auto);
+            border-radius: 8px;
+            padding: 9px 12px;
+            font-size: 14px;
+            white-space: pre-wrap;
+            min-height: 20px
+        }
+
+        .wp-doc textarea {
+            font-family: var(--font-body);
+            font-size: 14px;
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            padding: 10px 12px;
+            background: #fff;
+            width: 100%;
+            min-height: 70px;
+            resize: vertical;
+            line-height: 1.55
+        }
+
+        .wp-doc .ex {
+            font-size: 12px;
+            color: #9aa3a9;
+            font-style: italic;
+            margin: 2px 0 6px
+        }
+
+        .wp-link {
+            font-size: 12.5px
+        }
+
+        .wp-link a {
+            color: #5f8a00
+        }
+
+        footer.note {
+            margin-top: 26px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 12.5px;
+            line-height: 1.6
+        }
+
+        footer.note a {
+            color: #5f8a00;
+            text-decoration: none
+        }
+
+        @media (max-width:860px) {
+            .chart {
+                grid-template-columns: 1fr;
+                gap: 0
+            }
+
+            .corner,
+            .col-head {
+                display: none
+            }
+
+            .row-head {
+                border-radius: 12px 12px 0 0;
+                margin-top: 18px
+            }
+
+            .cell-peo {
+                border-radius: 0;
+                border-top: none
+            }
+
+            .cell-peo:last-of-type {
+                border-radius: 0 0 12px 12px
+            }
+
+            .stage-tag {
+                display: inline-block;
+                font-family: var(--font-head);
+                font-weight: 800;
+                font-size: 11px;
+                color: #5f8a00;
+                text-transform: uppercase;
+                letter-spacing: .06em;
+                margin-bottom: 2px
+            }
+
+            .legend,
+            .ratewrap,
+            .goalcards,
+            .twonotes {
+                grid-template-columns: 1fr
+            }
+
+            .field input {
+                min-width: 0;
+                width: 100%
+            }
+
+            .frow {
+                flex-wrap: wrap
+            }
+
+            .frow textarea,
+            .frow input {
+                flex: 1 1 100%
+            }
+
+            .list-headrow {
+                display: none
+            }
+        }
+
+        @media print {
+            .wrap {
+                padding: 0;
+                max-width: none;
+                background: #fff
+            }
+
+            .tabs,
+            .stepnav,
+            .toolbar .btn,
+            .add,
+            .addrow,
+            .rm,
+            .panel-intro,
+            .legend,
+            .tip-wrap,
+            .help-block {
+                display: none !important
+            }
+
+            .toolbar {
+                border: none;
+                box-shadow: none;
+                padding: 0 0 8px
+            }
+
+            /* Fundraising: print only Write your Plan */
+            #panel-fp .substep {
+                display: none !important
+            }
+
+            #panel-fp #sub-wp {
+                display: block !important
+            }
+
+            #panel-fp .section {
+                box-shadow: none;
+                border: none;
+                padding: 0
+            }
+
+            .wp-doc textarea {
+                display: none
+            }
+
+            .wp-doc .print-value {
+                display: block !important;
+                border: none;
+                padding: 6px 0;
+                white-space: pre-wrap
+            }
+
+            .wp-doc .ex {
+                display: none
+            }
+
+            .wp-auto,
+            .dt .auto {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact
+            }
+
+            .dt .th {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact
+            }
+
+            .pv {
+                display: none !important
+            }
+
+            /* Release the LearnWorlds scrolling page shell so the whole plan paginates */
+            html:has(body.slug-afp-tool) {
+                height: auto !important;
+                overflow: visible !important
+            }
+
+            body.slug-afp-tool,
+            body.slug-afp-tool #pageContainer,
+            body.slug-afp-tool #pageContent,
+            body.slug-afp-tool #sectionsWrapper {
+                height: auto !important;
+                min-height: 0 !important;
+                max-height: none !important;
+                overflow: visible !important;
+                display: block !important;
+                position: static !important
+            }
+
+            /* Print only the tool, not the LW header, footer, or hidden modal sections */
+            body.slug-afp-tool #sectionsWrapper>section:not(:has(#printBtn)) {
+                display: none !important
+            }
+
+            /* Let wide plan tables break across pages instead of clipping */
+            body.slug-afp-tool .tablewrap,
+            body.slug-afp-tool .dt {
+                overflow: visible !important
+            }
+
+            /* Hide floating widgets that repeat on every printed page */
+            body.slug-afp-tool .weglot-container,
+            body.slug-afp-tool #weglot-switcher-1,
+            body.slug-afp-tool .lw-admin-btns-wrapper,
+            body.slug-afp-tool > div[style*="position: fixed"],
+            body.slug-afp-tool > div[style*="position:fixed"] {
+                display: none !important
+            }
+
+            /* Remove LW section padding so the last page does not spill into a blank one */
+            body.slug-afp-tool #sectionsWrapper>section:has(#printBtn) {
+                padding: 0 !important;
+                margin: 0 !important
+            }
+
+            /* Show the Ministry / Organization and Date values in the printed header */
+            body.slug-afp-tool .toolbar .print-value {
+                display: block !important;
+                font-size: 15px;
+                font-weight: 600;
+                padding: 2px 0 0;
+                border: none
+            }
+
+            /* Keep headings with what follows them, and keep the financial table in one piece */
+            body.slug-afp-tool .wp-doc h2,
+            body.slug-afp-tool .wp-doc .wp-label {
+                break-after: avoid;
+                page-break-after: avoid
+            }
+
+            /* PRINT ALL STEPS: steps 1 to 7 print as worksheets, with blank boxes for empty fields */
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s1,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s2,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s3,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s4,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s5,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s6,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s7 {
+                display: block !important
+            }
+
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s2,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s3,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s4,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s5,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s6,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-s7 {
+                break-before: page;
+                page-break-before: always
+            }
+
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-ov,
+            body.slug-afp-tool .wrap.print-all #panel-fp #sub-wp {
+                display: none !important
+            }
+
+            body.slug-afp-tool .wrap.print-all .substep input,
+            body.slug-afp-tool .wrap.print-all .substep textarea,
+            body.slug-afp-tool .wrap.print-all .substep select {
+                display: none !important
+            }
+
+            body.slug-afp-tool .wrap.print-all .substep .print-value {
+                display: block !important;
+                box-sizing: border-box;
+                width: 100%;
+                min-height: 26px;
+                padding: 5px 8px;
+                border: 1px solid #9aa3a9;
+                border-radius: 5px;
+                background: #fff;
+                color: #323e48;
+                font-size: 12.5px;
+                line-height: 1.45;
+                white-space: pre-wrap
+            }
+
+            body.slug-afp-tool .wrap.print-all .substep textarea+.print-value {
+                min-height: 64px
+            }
+
+            body.slug-afp-tool .wrap.print-all .substep .print-value[data-ph]::before {
+                content: attr(data-ph);
+                display: block;
+                margin-bottom: 2px;
+                font-size: 9.5px;
+                font-weight: 700;
+                letter-spacing: .04em;
+                text-transform: uppercase;
+                color: #6b7680
+            }
+
+            body.slug-afp-tool .wrap.print-all .rate-item .print-value {
+                flex: 0 0 76px;
+                width: 76px;
+                text-align: center;
+                font-weight: 700
+            }
+
+            body.slug-afp-tool .wrap.print-all .dt .print-value {
+                min-height: 24px;
+                padding: 3px 6px
+            }
+
+            body.slug-afp-tool .wrap.print-all .dt textarea+.print-value {
+                min-height: 44px
+            }
+
+            body.slug-afp-tool .wrap.print-all .dwrap .print-value {
+                padding-left: 18px
+            }
+
+            body.slug-afp-tool .wrap.print-all .frow {
+                flex-wrap: wrap
+            }
+
+            body.slug-afp-tool .wrap.print-all .frow .print-value {
+                flex: 1 1 30%;
+                width: auto;
+                min-width: 120px
+            }
+
+            body.slug-afp-tool .wrap.print-all .frow textarea+.print-value {
+                flex: 1 1 100%
+            }
+
+            body.slug-afp-tool .wrap.print-all .mrow .print-value {
+                flex: 1;
+                width: auto;
+                min-width: 0
+            }
+
+            body.slug-afp-tool .wrap.print-all .mrow .grow+.print-value {
+                flex: 2
+            }
+
+            body.slug-afp-tool .wrap.print-all .list-headrow {
+                display: none !important
+            }
+
+            body.slug-afp-tool .wrap.print-all .metrichead {
+                padding-right: 0
+            }
+
+            body.slug-afp-tool .wrap.print-all .sname+.print-value {
+                border: none;
+                padding: 0;
+                min-height: 0;
+                font-weight: 600
+            }
+
+            body.slug-afp-tool .wrap.print-all .toolbar .print-value {
+                min-width: 220px;
+                min-height: 26px;
+                padding: 4px 8px;
+                border: 1px solid #9aa3a9;
+                border-radius: 5px
+            }
+
+            body.slug-afp-tool .wrap.print-all .ratewrap {
+                grid-template-columns: 1fr 1fr
+            }
+
+            body.slug-afp-tool .wrap.print-all .tablewrap {
+                break-inside: avoid;
+                page-break-inside: avoid
+            }
+
+            body.slug-afp-tool .wrap.print-all .dt-financial .rowlabel,
+            body.slug-afp-tool .wrap.print-all .dt-cashflow .rowlabel {
+                font-size: 11.5px
+            }
+
+            body.slug-afp-tool .wrap.print-all .dt-income {
+                grid-template-columns: 19% 12% 12% 12% 12% 16% 17% !important
+            }
+
+            body.slug-afp-tool .wrap.print-all .dt-financial {
+                grid-template-columns: 17% 11% 12% 11% 9% 22% 18% !important
+            }
+
+            body.slug-afp-tool .wrap.print-all .dt-cashflow {
+                grid-template-columns: 17% 12% 12% 12% 12% 17% 18% !important
+            }
+
+            body.slug-afp-tool .wrap.print-all .autonote {
+                break-before: avoid;
+                page-break-before: avoid
+            }
+
+            body.slug-afp-tool .wrap.print-all .prayer,
+            body.slug-afp-tool .wrap.print-all .instructions {
+                break-after: avoid;
+                page-break-after: avoid
+            }
+
+            body.slug-afp-tool .afp-noprint {
+                display: none !important
+            }
+
+            body.slug-afp-tool .wrap.print-all .s6block,
+            body.slug-afp-tool .wrap.print-all .goalcard,
+            body.slug-afp-tool .wrap.print-all .rate-strat,
+            body.slug-afp-tool .wrap.print-all .blk {
+                break-inside: avoid;
+                page-break-inside: avoid
+            }
+
+            body.slug-afp-tool .wrap.print-all .section h2,
+            body.slug-afp-tool .wrap.print-all .parttitle {
+                break-after: avoid;
+                page-break-after: avoid
+            }
+
+            body.slug-afp-tool .wrap.print-all .gtext,
+            body.slug-afp-tool .wrap.print-all .budgetstat,
+            body.slug-afp-tool .wrap.print-all .rate-title,
+            body.slug-afp-tool .wrap.print-all .dt .auto,
+            body.slug-afp-tool .wrap.print-all .dt .totalrow .td,
+            body.slug-afp-tool .wrap.print-all .dt .grouprow .td {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact
+            }
+
+            body.slug-afp-tool .wp-doc .tablewrap {
+                break-inside: avoid;
+                page-break-inside: avoid
+            }
+        }
+    </style>
+
+<div class="wrap">
+<header class="masthead">
+<div class="title-block">
+<h1>Annual Fundraising Plan Tool</h1>
+<p>Seven steps to a written plan you will actually use, rooted in Mi's Transformational Giving approach.</p>
+</div>
+<img alt="Mission Increase UK" class="logo" src="data:image/png;base64,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">
+</header>
+<div class="toolbar">
+<div class="field"><label for="ministry">Ministry / Organisation</label><input class="pv" id="ministry" placeholder="Your ministry name" type="text"></div>
+<div class="field"><label for="dt">Date</label><input class="pv" id="dt" type="date"></div>
+<div class="spacer"><br></div>
+<span aria-live="polite" class="io-msg" id="ioMsg" role="status">&nbsp;</span>
+<button class="btn alt" id="saveBtn" type="button">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+<polyline points="7 10 12 15 17 10"></polyline>
+<line x1="12" x2="12" y1="15" y2="3"></line>
+</svg> Save (CSV / Excel) </button>
+<button class="btn alt" id="importBtn" type="button">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+<polyline points="17 8 12 3 7 8"></polyline>
+<line x1="12" x2="12" y1="3" y2="15"></line>
+</svg> Import </button>
+<input accept=".csv,text/csv,.txt" id="fileInput" style="display:none" type="file">
+<button class="btn alt" id="printAllBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg> Print all steps </button>
+            <button class="btn" id="printBtn" type="button">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M6 9V2h12v7"></path>
+<path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+<rect height="8" width="12" x="6" y="14"></rect>
+</svg> Print draft plan </button>
+</div>
+<!-- ===== FUNDRAISING PLAN ===== -->
+<section class="panel active" id="panel-fp">
+<div class="panel-intro">
+<p>The <strong>Annual Fundraising Plan</strong>. Work through the seven steps, then the final step compiles your printable plan. Values you enter early carry forward automatically, and cells that fill in for you are shaded green.</p>
+</div>
+<div class="stepnav" id="stepnav">
+<button class="stepbtn active" data-sub="ov" type="button">Overview</button>
+<button class="stepbtn" data-sub="s1" type="button">Step 1: Vision &amp; Mission</button>
+<button class="stepbtn" data-sub="s2" type="button">Step 2: Systems Assessment</button>
+<button class="stepbtn" data-sub="s3" type="button">Step 3: Data Review</button>
+<button class="stepbtn" data-sub="s4" type="button">Step 4: Strategic Goals</button>
+<button class="stepbtn" data-sub="s5" type="button">Step 5: Financial Targets</button>
+<button class="stepbtn" data-sub="s6" type="button">Step 6: Action Steps</button>
+<button class="stepbtn" data-sub="s7" type="button">Step 7: Review Process</button>
+<button class="stepbtn" data-sub="wp" type="button">Write your Plan</button>
+</div>
+<!-- Overview -->
+<div class="substep active" id="sub-ov">
+<div class="section">
+<h2>Annual Fundraising Plan Template</h2>
+<p style="font-size:14px;color:#4a555e">This tool helps you gather data to set informed goals and plan the steps you will take to meet them. It contains seven steps:</p>
+<ol style="font-size:14px;color:#4a555e;margin:0 0 10px;padding-left:22px">
+<li>Review Vision &amp; Mission</li>
+<li>Assess Current Fundraising Systems</li>
+<li>Review Past Fundraising Data</li>
+<li>Set Strategic Fundraising Goals</li>
+<li>Set Financial Targets</li>
+<li>Create Action Steps</li>
+<li>Establish an Ongoing Review Process</li>
+</ol>
+<p style="font-size:14px;color:#4a555e">The final step compiles everything into one printable document to share with your trustees, in a meeting with a champion, or for a trust or foundation application.</p>
+<p style="font-size:14px;color:#4a555e">Some cells auto fill from earlier steps and are shaded green. Give yourself time for each step, and before you begin each one, pause and pray. We strongly encourage you to work with your Mi UK Area Director while filling in this tool.</p>
+</div>
+</div>
+<!-- Step 1 -->
+<div class="substep" id="sub-s1">
+<div class="section">
+<h2>Step 1: Review Vision &amp; Mission<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">An annual plan moves you from reacting to every funding gap to executing on purpose. Grounding it in your vision and mission first keeps the plan connected to why you raise money, not just how much.</span></span></h2>
+<div class="parttitle">Part 1: Where are we headed?</div>
+<p class="prayer">Fundraising is not separate from your mission, it exists to advance it. That's why this plan begins here: prayerfully review your organisational foundation, discerning together with the Lord where you are headed and where you need to remain faithful.</p>
+<div class="blk"><label>Vision Statement</label><textarea class="field-in calc" id="s1_vision"></textarea></div>
+<div class="blk"><label>Mission Statement</label><textarea class="field-in calc" id="s1_mission"></textarea></div>
+<div class="parttitle">Part 2: What are our financial needs this year?</div>
+<p class="prayer">Prayerfully review your budget. Based on where the Lord is calling you this next year, what do you need?</p>
+<div class="blk"><label>Does your organisation have a current strategic plan? If so, does it name specific funding priorities for this year?</label><textarea class="field-in pv"></textarea></div>
+<div class="blk"><label>Based on your ideal budget, how much do you need to raise this year?</label><span class="dwrap"><input class="field-in money calc" id="s1_raise" placeholder="0" type="text"></span></div>
+<div class="blk"><label>Are there any projects, programmes, or new staff posts you're planning that will need start-up funding this year to get off the ground?</label><textarea class="field-in pv"></textarea></div>
+<div class="blk"><label>Did you meet your budget last year? If not, how did you pivot?</label><textarea class="field-in pv"></textarea></div>
+<div class="parttitle">Part 3: What will affect our fundraising this year?</div>
+<p class="prayer">Prayerfully consider what adjustments or changes need to be made this year. Bring before the Lord the factors that could impact your fundraising this year.</p>
+<div class="blk"><label>What factors, both within your control and outside of it, could affect your fundraising efforts next year? (Think staff or programme changes, an economic downturn, changes in law or regulation.)</label>
+<p class="ex">Example: a new Head of Fundraising, rising energy and supply costs, changes to Gift Aid or tax rules affecting major givers.</p><textarea class="field-in pv"></textarea>
+</div>
+<div class="blk"><label>Are there programme changes? (Adding or enhancing, replacing or ending programmes or services)</label>
+<p class="ex">Consider: What are you adding? How many will be served? How much will it cost? How will it be funded? If ending or changing, consider how many people will be affected and how many champions are invested in those programmes.</p><textarea class="field-in pv"></textarea>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="substep" id="sub-s2">
+<div class="section">
+<h2>Step 2: Assess Current Fundraising Systems<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">Before you can plan where you're going, you need an honest picture of where you are. Rate each activity as it actually is today, not how you wish it were. That's what sets up every goal in the steps ahead.</span></span></h2>
+<p class="prayer">A fundraising system is more than one activity in isolation, it's a coordinated set of recommended practices working together toward one purpose: growing champions and resources.</p>
+<div class="instructions">1. Review the list of fundraising systems. Underneath each system are lists of recommended activities. 2. Give a gut-check rating to each of the activities indicating how well your organisation is accomplishing each one. The chart is colour-coded for ease of review. 3. Invite others to rate the following activities to provide multiple perspectives. 4. Review your activity looking for patterns of things that are going well or need attention. 5. Your ratings here will directly shape the goals you set in Step 4 and the action steps you build in Step 6. 6. It's okay if you're not doing all of these yet. Don't expect to score high on everything. This isn't a scorecard, it's a way for you to see the entire picture and help you determine what to focus on next.</div>
+<div class="rate-legend">0 - Non-existent &nbsp; 1 - Needs Work &nbsp; 2 - Adequate &nbsp; 3 - Fantastic</div>
+<div class="ratewrap">
+<div>
+<div class="rate-strat">
+<div class="rate-title">MAJOR GIFTS</div>
+<div class="rate-item"><span class="rate-label">Actively identifying potential major givers</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Actively nurturing and stewarding major gift relationships</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Making clear, well-prepared asks of major givers</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Using a major gifts tracking system</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+<div class="rate-strat">
+<div class="rate-title">MONTHLY GIVING PROGRAMME</div>
+<div class="rate-item"><span class="rate-label">Programme established with a clear identity and name, including supporting systems such as Direct Debit</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Communication strategy for acquiring and converting new monthly givers</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Onboarding process for new monthly givers</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Ongoing communication plan for current monthly givers</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+<div class="rate-strat">
+<div class="rate-title">COMMUNICATIONS</div>
+<div class="rate-item"><span class="rate-label" title="States the problem, solution, impact, and invitation">Clear, compelling Case for Support</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">A communications calendar mapping activity across the year</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label" title="Impact stories, gratitude, updates, prayer requests, and appeals">Communications content developed and balanced across all five communication types</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Intentional channel strategy across email, social media, and direct mail, matched to audience</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Timely, accurate thanking and gift records, with Gift Aid declarations captured and claimed correctly</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label" title="Praying, giving, serving, learning, and sharing">Inviting champions to take next-step growth actions across all five P-E-O categories</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+<div class="rate-strat">
+<div class="rate-title">ACQUISITION EVENTS</div>
+<div class="rate-item"><span class="rate-label">Large-scale events with champions actively inviting new guests, not just attending</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Micro-events that are champion-led and champion-hosted, with the ministry equipping rather than driving</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">A clear Champion Participation Project offering a bite-sized entry point for new champions</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label" title="Large-scale events, micro-events, and Champion Participation Project">All three event types working together as one coordinated acquisition strategy</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+<div class="rate-strat">
+<div class="rate-title">CHURCH ENGAGEMENT</div>
+<div class="rate-item"><span class="rate-label">Actively identifying churches aligned with our mission and cause</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Actively cultivating relationships with churches, seeking mutual Kingdom impact</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Data capturing where champions attend church</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label" title="Pulpit time, ministry fairs, written updates">Communicating mission directly to churches</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+</div>
+<div>
+<div class="rate-strat">
+<div class="rate-title">TRUSTS, FOUNDATIONS &amp; GRANTS</div>
+<div class="rate-item"><span class="rate-label">Researching mission-aligned grant-makers</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Actively cultivating relationships with grant-makers</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Writing and reviewing grant proposals prior to submission</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Using a grant tracking system</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Fulfilling grant reporting and compliance requirements after an award</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+<div class="rate-strat">
+<div class="rate-title">BUSINESS ENGAGEMENT</div>
+<div class="rate-item"><span class="rate-label">Actively identifying businesses aligned with our mission and cause</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Actively cultivating relationships with businesses, seeking mutual Kingdom impact</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Champions are using Payroll Giving or employer match-funding for their giving</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+<div class="rate-strat">
+<div class="rate-title">LEGACY GIFTS</div>
+<div class="rate-item"><span class="rate-label" title="Gifts in Wills: residuary, pecuniary and in-memory gifts">Leadership understands the basics of legacy giving (gifts in Wills) and when it may become relevant</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">A simple way exists for champions to learn that leaving a gift in their Will is an option</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">A relationship is in place with a solicitor, independent financial adviser, or Will-writing service for when a champion expresses interest</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+<div class="rate-strat">
+<div class="rate-title">FEES FOR SERVICES</div>
+<div class="rate-item"><span class="rate-label">Selling merchandise connected to our mission</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Charging registration fees for programmes or events</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Offering paid services aligned with our mission</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+<div class="rate-strat">
+<div class="rate-title">GIFTS IN KIND</div>
+<div class="rate-item"><span class="rate-label">Actively receiving and stewarding donated items</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Actively receiving and stewarding donated services</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Accurately recording and acknowledging gifts in kind, in line with charity accounting requirements (SORP)</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+<div class="rate-strat">
+<div class="rate-title">CHARITY LEADERSHIP</div>
+<div class="rate-item"><span class="rate-label">Charity-wide adoption of biblical fundraising principles</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Chief Executive availability and commitment to fundraising role</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Staff dedicated to the fundraising role, with the skills and capacity to succeed</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Trustees' commitment to their role in fundraising</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Trustees' commitment to personally giving to the mission</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Regularly engaging with your Mi UK Area Director for coaching and accountability</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+<div class="rate-strat">
+<div class="rate-title">FUNDRAISING OPERATIONS</div>
+<div class="rate-item"><span class="rate-label">A P-E-O structure embedded across fundraising activities</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">A CRM or database that is well set up and actively used</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">A secure online giving platform and donor experience that integrate smoothly with our CRM</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+<div class="rate-item"><span class="rate-label">Financial reports that are accessible and used to track fundraising</span><select class="rate pv">
+<option disabled="" selected="" value="">RATE</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></div>
+</div>
+</div>
+</div>
+<div class="parttitle">Activities Metrics</div>
+<div class="instructions">These metrics show whether the systems you just rated above are actually being used. Looking back at your current financial year, gather what data you can for each.</div>
+<div class="tablewrap">
+<div class="dt dt-metrics" role="table" style="grid-template-columns:70% 30%">
+<div class="tr" role="row">
+<div class="th" role="columnheader">&nbsp;</div>
+<div class="th num" role="columnheader">Current Financial Year</div>
+</div>
+<div class="tr grouprow" role="row">
+<div class="td" role="cell">Major Gifts</div>
+<div class="td" role="cell">&nbsp;</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many face-to-face major giver meetings did you have per month, on average?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr grouprow" role="row">
+<div class="td" role="cell">Communications</div>
+<div class="td" role="cell">&nbsp;</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">What is the size of your print mailing list?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">What is the size of your email mailing list?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many newsletter issues did you send (electronic or print)?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many appeal letters, direct mail pieces, or e-solicitations did you send?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr grouprow" role="row">
+<div class="td" role="cell">Acquisition Events</div>
+<div class="td" role="cell">&nbsp;</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many people attended your events?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr grouprow" role="row">
+<div class="td" role="cell">Volunteers</div>
+<div class="td" role="cell">&nbsp;</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many total volunteers did you have?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many volunteer hours were contributed?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">Of those volunteers, how many are also givers?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="substep" id="sub-s3">
+<div class="section">
+<h2>Step 3: Review Past Fundraising Data<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">This is your funding source assessment. Look for concentration, one or two sources carrying most of the load, plus gaps and trends. Know which stream carries you, and what would happen if it moved.</span></span></h2>
+<div class="instructions">These categories reflect Mi's recommended fundraising channels. These data points are valuable to have, but you may not be collecting all of them yet. Include what you have, and consider ways you could collect any missing data going forward. 1. Enter numbers you have available for funds raised. 2. Add in the individual giving stats. 3. Review your data from steps 2 and 3. Look for strengths, weaknesses, opportunities and threats.</div>
+<div class="tablewrap">
+<div class="dt dt-income" role="table" style="grid-template-columns:20% 15% 15% 15% 17% 18%">
+<div class="tr" role="row">
+<div class="th" role="columnheader">Income Stream</div>
+<div class="th num" role="columnheader">2 Years Ago</div>
+<div class="th num" role="columnheader">Last year</div>
+<div class="th num" role="columnheader">Year to Date</div>
+<div class="th num" role="columnheader">Current Year Target</div>
+<div class="th num" role="columnheader">Total % of Income</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Major Gifts</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="0" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="0" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="0" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="0" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_0" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Monthly Giving</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="1" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="1" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="1" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="1" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_1" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Events</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="2" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="2" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="2" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="2" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_2" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Communications</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="3" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="3" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="3" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="3" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_3" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Trusts &amp; Foundations</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="4" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="4" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="4" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="4" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_4" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Churches</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="5" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="5" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="5" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="5" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_5" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Fees for Services</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="6" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="6" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="6" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="6" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_6" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Legacies &amp; Other</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="7" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="7" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="7" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="7" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_7" role="cell">n/a</div>
+</div>
+<div class="tr totalrow" role="row">
+<div class="td" role="cell">TOTAL</div>
+<div class="td num" id="s3tot_b" role="cell">£0</div>
+<div class="td num" id="s3tot_c" role="cell">£0</div>
+<div class="td num" id="s3tot_d" role="cell">£0</div>
+<div class="td num" id="s3tot_e" role="cell">£0</div>
+<div class="td" role="cell"><br></div>
+</div>
+</div>
+</div>
+<p class="autonote"><b>Total % of Income</b> auto-calculates as each stream's Current Year Target divided by the target total.</p>
+                    <p class="autonote afp-noprint"><b>Rename an income stream</b> by typing over its name in the first column. Your names carry through every step and into your plan, and the calculations stay the same.</p>
+                    <button class="addrow" type="button" id="resetStreams">Reset names to defaults</button>
+<div class="twonotes">
+<div class="blk"><label>What gift anomalies do you need to account for?</label><textarea class="field-in pv"></textarea></div>
+<div class="blk"><label>What historical trends do we need to account for?</label><textarea class="field-in pv"></textarea></div>
+</div>
+<div class="parttitle">Giving Statistics</div>
+<div class="tablewrap">
+<div class="dt dt-giving" role="table" style="grid-template-columns:40% 15% 15% 15% 15%">
+<div class="tr" role="row">
+<div class="th" role="columnheader">&nbsp;</div>
+<div class="th num" role="columnheader">2 Years Ago</div>
+<div class="th num" role="columnheader">Last year</div>
+<div class="th num" role="columnheader">Year to Date</div>
+<div class="th num" role="columnheader">Current Year Target</div>
+</div>
+<div class="tr grouprow" role="row">
+<div class="td" role="cell">Individuals</div>
+<div class="td" role="cell">&nbsp;</div>
+<div class="td" role="cell">&nbsp;</div>
+<div class="td" role="cell">&nbsp;</div>
+<div class="td" role="cell">&nbsp;</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many people are in your database?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many of these people gave financially?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many of these people are major givers?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many of these people are monthly givers?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many of these people were first-time givers?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many of these people are lapsed givers?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many of these people INCREASED their giving?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many of these people DECREASED their giving?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr grouprow" role="row">
+<div class="td" role="cell">Institutional Connections</div>
+<div class="td" role="cell">&nbsp;</div>
+<div class="td" role="cell">&nbsp;</div>
+<div class="td" role="cell">&nbsp;</div>
+<div class="td" role="cell">&nbsp;</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many grants were received?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many church partnerships?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel small" role="cell">How many businesses gave?</div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+<div class="td" role="cell"><input class="cell num pv"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="substep" id="sub-s4">
+<div class="section">
+<h2>Step 4: Set Strategic Fundraising Goals<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">Choose 1-3 goals about champion growth or process change, not just financial figures. The best goals are honest about where you are and genuinely ambitious about what's possible: neither a wish nor a ceiling.</span></span></h2>
+<div class="instructions">Strategic fundraising goals are the priorities you will give special time and attention to this year, which is why it is difficult for organisations to focus on more than three at a time. These goals are primarily about the growth of your champions or changes to your ministry's fundraising processes, not just financial figures. Some strategic goals may have no financial figure attached, but rather a champion or process metric. When a change in income is associated with a goal, it is a result of the growth you are pursuing, not the goal itself. If you have identified more than three strategic goals, prioritise them by impact or urgency, and plan to address some of them later.</div>
+<div class="instructions">Write down 1-3 strategic goals you want to accomplish over the next 3-5 years. Articulate them using the SMART categories.</div>
+<p style="font-size:12.5px;color:var(--muted);margin:0 0 14px"><b>SMART:</b> Specific (What? Who? Why? When? Where?) · Measurable (Can it be evaluated?) · Achievable (Why and how is it attainable and realistic?) · Relevant (How does this grow your impact?) · Time-Bound (When will it be accomplished?)</p>
+<div class="goalcards">
+<div class="goalcard">
+<h4>#1</h4>
+<div class="blk"><label>Goal</label><textarea class="field-in calc" id="s4goal_1"></textarea></div>
+<div class="blk"><label>Change in Income Associated (£)</label><span class="dwrap"><input class="field-in money calc" id="s4dc_1" placeholder="0" type="text"></span></div>
+<div class="blk"><label title="e.g., 50 champions, 25 monthly givers">Champion or Process Metric Associated</label><input class="field-in pv" id="s4cm_1" type="text"></div>
+<div class="blk"><label title="Why this goal? Why now? Why do you believe you can accomplish it?">Goal Rationale / Reasoning</label><textarea class="field-in pv"></textarea></div>
+</div>
+<div class="goalcard">
+<h4>#2</h4>
+<div class="blk"><label>Goal</label><textarea class="field-in calc" id="s4goal_2"></textarea></div>
+<div class="blk"><label>Change in Income Associated (£)</label><span class="dwrap"><input class="field-in money calc" id="s4dc_2" placeholder="0" type="text"></span></div>
+<div class="blk"><label title="e.g., 50 champions, 25 monthly givers">Champion or Process Metric Associated</label><input class="field-in pv" id="s4cm_2" type="text"></div>
+<div class="blk"><label title="Why this goal? Why now? Why do you believe you can accomplish it?">Goal Rationale / Reasoning</label><textarea class="field-in pv"></textarea></div>
+</div>
+<div class="goalcard">
+<h4>#3</h4>
+<div class="blk"><label>Goal</label><textarea class="field-in calc" id="s4goal_3"></textarea></div>
+<div class="blk"><label>Change in Income Associated (£)</label><span class="dwrap"><input class="field-in money calc" id="s4dc_3" placeholder="0" type="text"></span></div>
+<div class="blk"><label title="e.g., 50 champions, 25 monthly givers">Champion or Process Metric Associated</label><input class="field-in pv" id="s4cm_3" type="text"></div>
+<div class="blk"><label title="Why this goal? Why now? Why do you believe you can accomplish it?">Goal Rationale / Reasoning</label><textarea class="field-in pv"></textarea></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="substep" id="sub-s5">
+<div class="section">
+<h2>Step 5: Set Financial Targets<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">Build this target from the ground up, source by source, the same way you set your goals in Step 4. This step also names two different numbers: your revenue goal, and what it will cost to raise it.</span></span></h2>
+<div class="instructions">1. With your Strategic Goals in mind, set your financial targets for the next year for each income stream in the Next Year Target column. 2. If a Strategic Goal includes a Change in Income Associated, make sure that change is reflected in the Next Year Target for the appropriate income stream. 3. Compare that number to the Current Year Target. 4. In the Rationale column, provide the reason why this income stream may go up, down, or stay the same in the coming year. This analysis may lead you to adjust the goal. 5. Note any anomalies or trends you identified in step 3 that need to be factored in.</div>
+<div class="goalcards">
+<div class="goalcard">
+<h4>Strategic Goal #1</h4>
+<div class="gtext" id="s5goaltop_1"><br></div>
+<div class="gdc">Change in Income Associated: <span id="s5dctop_1">£0</span></div>
+</div>
+<div class="goalcard">
+<h4>Strategic Goal #2</h4>
+<div class="gtext" id="s5goaltop_2"><br></div>
+<div class="gdc">Change in Income Associated: <span id="s5dctop_2">£0</span></div>
+</div>
+<div class="goalcard">
+<h4>Strategic Goal #3</h4>
+<div class="gtext" id="s5goaltop_3"><br></div>
+<div class="gdc">Change in Income Associated: <span id="s5dctop_3">£0</span></div>
+</div>
+</div>
+<div class="budgetstat"><span class="v" id="s5budget">£0</span> <span class="k">Next Year's Revenue Goal</span></div>
+<div class="parttitle">Fundraising Programme Budget<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">What it will cost to run this fundraising programme next year: staff time, events, communications, database, travel. Mi's guide is that well-run programmes spend roughly 10p to 25p for every £1 raised. This is investment, not waste.</span></span></div>
+<p class="prayer">This is a different number from your revenue goal above. It's what you'll spend to raise it.</p>
+<div class="blk" style="max-width:280px"><label>Fundraising Programme Budget</label><span class="dwrap"><input class="field-in money calc" id="s5progbudget" placeholder="0" type="text"></span></div>
+<p class="autonote">Programme Budget as a share of your Revenue Goal: <b><span class="pctflag" id="s5progpct">n/a</span></b>. Healthy range is 10%-25%.</p>
+<div class="tablewrap">
+<div class="dt dt-financial" role="table" style="grid-template-columns:14% 12% 13% 12% 10% 24% 15%">
+<div class="tr" role="row">
+<div class="th" role="columnheader">Income Streams</div>
+<div class="th num" role="columnheader">Current Year Target</div>
+<div class="th num" role="columnheader">Next Year Target</div>
+<div class="th num" role="columnheader">£ Change</div>
+<div class="th num" role="columnheader">% Change</div>
+<div class="th" role="columnheader" title="Why this change? Why now? Why do you believe this is achievable?">Rationale / Reasoning</div>
+<div class="th num" role="columnheader">Total % of Income</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Major Gifts</div>
+<div class="td auto money" id="s5c_0" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="0" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_0" role="cell">£0</div>
+<div class="td auto pct" id="s5f_0" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="0" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_0" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Monthly Giving</div>
+<div class="td auto money" id="s5c_1" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="1" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_1" role="cell">£0</div>
+<div class="td auto pct" id="s5f_1" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="1" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_1" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Events</div>
+<div class="td auto money" id="s5c_2" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="2" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_2" role="cell">£0</div>
+<div class="td auto pct" id="s5f_2" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="2" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_2" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Communications</div>
+<div class="td auto money" id="s5c_3" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="3" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_3" role="cell">£0</div>
+<div class="td auto pct" id="s5f_3" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="3" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_3" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Trusts &amp; Foundations</div>
+<div class="td auto money" id="s5c_4" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="4" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_4" role="cell">£0</div>
+<div class="td auto pct" id="s5f_4" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="4" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_4" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Churches</div>
+<div class="td auto money" id="s5c_5" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="5" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_5" role="cell">£0</div>
+<div class="td auto pct" id="s5f_5" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="5" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_5" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Fees for Services</div>
+<div class="td auto money" id="s5c_6" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="6" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_6" role="cell">£0</div>
+<div class="td auto pct" id="s5f_6" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="6" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_6" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Legacies &amp; Other</div>
+<div class="td auto money" id="s5c_7" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="7" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_7" role="cell">£0</div>
+<div class="td auto pct" id="s5f_7" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="7" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_7" role="cell">n/a</div>
+</div>
+<div class="tr totalrow" role="row">
+<div class="td" role="cell">TOTAL</div>
+<div class="td num" id="s5totc" role="cell">£0</div>
+<div class="td num" id="s5totd" role="cell">£0</div>
+<div class="td num" id="s5tote" role="cell">£0</div>
+<div class="td" role="cell"><br></div>
+<div class="td" role="cell"><br></div>
+<div class="td" role="cell"><br></div>
+</div>
+</div>
+</div>
+<p class="autonote"><b>Auto-calculated:</b> Current Year Target pulls from Step 3 · £ Change = Next - Current · % Change = £ Change / Current · Total % of Income = Next Year / Next-Year total.</p>
+<div class="parttitle">Quarterly Cash Flow<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">Break each stream's Next Year Target into the quarter you expect to receive it. Giving is rarely even across the year, and seeing the seasonal concentration ahead of time is what lets you plan around it.</span></span></div>
+<p class="prayer">Split each income stream's Next Year Target (from the table above) across the four quarters. The quarterly amounts should add up to that stream's target. Q1 is the first quarter of your financial year.</p>
+<div class="tablewrap">
+<div class="dt dt-cashflow" role="table" style="grid-template-columns:16% 12% 12% 12% 12% 18% 18%">
+<div class="tr" role="row">
+<div class="th" role="columnheader">Income Streams</div>
+<div class="th num" role="columnheader">Q1</div>
+<div class="th num" role="columnheader">Q2</div>
+<div class="th num" role="columnheader">Q3</div>
+<div class="th num" role="columnheader">Q4</div>
+<div class="th num" role="columnheader">Row Total</div>
+<div class="th num" role="columnheader">Next Year Target</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Major Gifts</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="0" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="0" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="0" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="0" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_0" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_0" role="cell">£0</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Monthly Giving</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="1" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="1" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="1" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="1" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_1" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_1" role="cell">£0</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Events</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="2" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="2" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="2" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="2" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_2" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_2" role="cell">£0</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Communications</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="3" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="3" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="3" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="3" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_3" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_3" role="cell">£0</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Trusts &amp; Foundations</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="4" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="4" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="4" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="4" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_4" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_4" role="cell">£0</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Churches</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="5" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="5" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="5" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="5" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_5" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_5" role="cell">£0</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Fees for Services</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="6" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="6" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="6" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="6" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_6" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_6" role="cell">£0</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Legacies &amp; Other</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="7" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="7" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="7" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="7" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_7" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_7" role="cell">£0</div>
+</div>
+<div class="tr totalrow" role="row">
+<div class="td" role="cell">TOTAL</div>
+<div class="td num" id="s5qcol_1" role="cell">£0</div>
+<div class="td num" id="s5qcol_2" role="cell">£0</div>
+<div class="td num" id="s5qcol_3" role="cell">£0</div>
+<div class="td num" id="s5qcol_4" role="cell">£0</div>
+<div class="td num" id="s5qcol_tot" role="cell">£0</div>
+<div class="td" role="cell"><br></div>
+</div>
+</div>
+</div>
+<p class="autonote" id="s5cashflownote"><b>Row Total</b> should match each stream's Next Year Target. Any mismatch shows here.</p>
+</div>
+</div>
+<!-- Step 6 -->
+<div class="substep" id="sub-s6">
+<div class="section">
+<h2>Step 6: Create Action Steps<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">This is where goals become a real calendar and real ownership. Map campaigns and stewardship touchpoints month by month, and assign each action step to a specific owner. Fundraising works best as shared ownership across your team and trustees, not one person's job.</span></span></h2>
+<div class="instructions">1. Determine the action steps you (and your team) will take in order to reach your strategic fundraising goals and financial targets. List your major action steps on each line and add additional lines as needed. 2. If a strategic goal maps to a specific income stream, place its action steps in that stream's block below. If a goal is focused on champion growth or an internal process that doesn't map to one income stream, use the Goal-Focused Action Steps block instead. 3. Articulate who is ultimately accountable for ensuring each action step is accomplished, and include who else would be involved. Note when you intend to start and when it should be completed. Some action steps are one-and-done with a clear end date, while others are ongoing and should be reviewed on a regular cadence, such as weekly or monthly, rather than closed out. 4. Regularly review this document and update the progress and adjustments columns. 5. Note the last date reviewed.</div>
+<div class="blk" style="max-width:280px"><label>Last Reviewed</label><input class="field-in pv" id="s6_reviewed" type="date"></div>
+<div class="goalcards">
+<div class="goalcard">
+<h4>Strategic Goal #1</h4>
+<div class="gtext" id="s6goal_1"><br></div>
+</div>
+<div class="goalcard">
+<h4>Strategic Goal #2</h4>
+<div class="gtext" id="s6goal_2"><br></div>
+</div>
+<div class="goalcard">
+<h4>Strategic Goal #3</h4>
+<div class="gtext" id="s6goal_3"><br></div>
+</div>
+</div>
+<div class="parttitle">Financial Targets</div>
+<div class="s6block">
+<div class="s6head"><span class="s6name">Major Gifts</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_0">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="0"><br></div><button class="addrow" data-add6="0" type="button">+ Add action step</button>
+</div>
+<div class="s6block">
+<div class="s6head"><span class="s6name">Monthly Giving</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_1">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="1"><br></div><button class="addrow" data-add6="1" type="button">+ Add action step</button>
+</div>
+<div class="s6block">
+<div class="s6head"><span class="s6name">Events</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_2">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="2"><br></div><button class="addrow" data-add6="2" type="button">+ Add action step</button>
+</div>
+<div class="s6block">
+<div class="s6head"><span class="s6name">Communications</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_3">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="3"><br></div><button class="addrow" data-add6="3" type="button">+ Add action step</button>
+</div>
+<div class="s6block">
+<div class="s6head"><span class="s6name">Trusts &amp; Foundations</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_4">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="4"><br></div><button class="addrow" data-add6="4" type="button">+ Add action step</button>
+</div>
+<div class="s6block">
+<div class="s6head"><span class="s6name">Churches</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_5">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="5"><br></div><button class="addrow" data-add6="5" type="button">+ Add action step</button>
+</div>
+<div class="s6block">
+<div class="s6head"><span class="s6name">Fees for Services</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_6">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="6"><br></div><button class="addrow" data-add6="6" type="button">+ Add action step</button>
+</div>
+<div class="s6block">
+<div class="s6head"><span class="s6name">Legacies &amp; Other</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_7">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="7"><br></div><button class="addrow" data-add6="7" type="button">+ Add action step</button>
+</div>
+<div class="s6block">
+<div class="s6head"><span class="s6name">Goal-Focused Action Steps</span><span class="s6tgt" style="color:var(--muted);font-weight:400">Not tied to a specific income stream</span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="8"><br></div><button class="addrow" data-add6="8" type="button">+ Add action step</button>
+</div>
+<div class="parttitle">Campaign Calendar<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">Aim for 2-4 major campaign moments across the year, aligned with when your ministry's impact is most visible, not when your budget is most stressed. Fill the months between with cultivation and stewardship that keep the relationship warm.</span></span></div>
+<p class="prayer">For each month, note any major campaign or ask planned, and the cultivation or stewardship activity happening alongside it.</p>
+<div class="tablewrap">
+<div class="dt dt-calendar" role="table" style="grid-template-columns:12% 44% 44%">
+<div class="tr" role="row">
+<div class="th" role="columnheader">Month</div>
+<div class="th" role="columnheader">Campaign / Ask</div>
+<div class="th" role="columnheader">Cultivation / Stewardship</div>
+</div>
+<div id="calrows" style="display:contents"><br></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 7 -->
+<div class="substep" id="sub-s7">
+<div class="section">
+<h2>Step 7: Establish an Ongoing Review Process<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">A plan only creates value if someone keeps reviewing it. Build a quarterly rhythm around four questions: where are we against each metric, what worked and why, what didn't and what needs adjusting, and what's next.</span></span></h2>
+<div class="instructions">1. A fundraising plan only creates value if it gets used. Name who will lead the ongoing review process and who else will be involved. 2. Set a meeting frequency and hold to it. This plan is a living document meant to be reviewed every 30-60 days, not filed away and revisited once a year. 3. Build prayer into your review rhythm alongside the financial and organisational review, not as an afterthought. 4. Establish how changes and recommendations to the plan get approved, so adjustments can happen as needed rather than waiting for the next annual planning cycle. 5. Identify the specific reports your team needs, how often each is produced, and who is responsible for reviewing them. 6. Structure each review around four questions: Where are we against each metric? What worked, and why? What didn't, and what needs to change? What are our priorities for the next quarter?</div>
+<div class="blk"><label>Team Leader</label><input class="field-in pv" placeholder="Example: Head of Fundraising" type="text"></div>
+<div class="blk"><label>Team Members</label><input class="field-in pv" placeholder="Example: Evaluation team will be Amy, Carly, Steve and Barbara" type="text"></div>
+<div class="blk"><label>Review Meeting Frequency</label><textarea class="field-in pv" placeholder="Example: Head of Fundraising will convene a monthly meeting of the evaluation team to review the plan and recommend adjustments."></textarea></div>
+<div class="blk"><label>Prayer Strategy for the Review Team</label><textarea class="field-in pv" placeholder="Example: Every Monday, the Head of Fundraising emails the team with a list of things to pray for and updates on previous things prayed for."></textarea></div>
+<div class="blk"><label>Recommendation Process for Changes to the Plan</label><textarea class="field-in pv" placeholder="Example: Evaluation team recommends changes to the plan which are approved by the Chief Executive."></textarea></div>
+<div class="parttitle">Reports</div>
+<div class="instructions">These are sample reports to spark your thinking, not a required list. Edit the content, remove what doesn't fit your ministry, and add any additional reports your team relies on.</div>
+<div class="list-headrow"><span class="grow">Report Name</span><span>Frequency</span><span>Who Is Responsible?</span><span>Who Reviews?</span></div>
+<div id="s7rows"><br></div>
+<button class="addrow" id="add7" type="button">+ Add report</button>
+<div class="parttitle">Success Metrics<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">Track both what came in and how relationships grew. A plan that measures only money reinforces fundraising as revenue-extraction instead of champion-development. What gets measured gets owned.</span></span></div>
+<div class="instructions">List 5-8 metrics your review team will track, with a mix of financial (income, gift counts) and relational (champion growth, retention) measures. A few are started for you below; edit or remove any that don't fit.</div>
+<div class="metrichead"><span class="grow">Metric Name</span><span>Type</span><span>Target</span><span>Review Frequency</span></div>
+<div id="metricrows"><br></div>
+<button class="addrow" id="addmetric" type="button">+ Add metric</button>
+</div>
+</div>
+<!-- Write your Plan -->
+<div class="substep" id="sub-wp">
+<div class="section wp-doc">
+<h2 style="border:none;font-size:20px">Write Your Plan</h2>
+<p style="font-size:13px;color:var(--muted)">Use the previous seven steps to write a narrative plan. Green fields fill in automatically from your earlier entries and update if you change them. Click <b>Print draft plan</b> to export this page as your finished plan.</p>
+<h2>Introduction</h2>
+<p class="ex">A general overview of this entire plan and the process used to create it. Summarise significant adjustments to operations or fundraising strategy, and note who was involved in developing this plan.</p>
+<textarea class="pv" id="wp_intro"></textarea>
+<div class="wp-label">Vision Statement</div>
+<div class="wp-auto" id="wp_vision"><br></div>
+<div class="wp-label">Mission Statement</div>
+<div class="wp-auto" id="wp_mission"><br></div>
+<h2>Case for Support</h2>
+<p class="ex">Extend your mission statement and continue any themes or language you will use in materials this year. The Mi Case for Support tool is a good resource.</p>
+<textarea class="pv" id="wp_case"></textarea>
+<h2>Fundraising Systems Summary</h2>
+<p class="ex">Summarise what Step 2 revealed about your fundraising systems. Which systems are strong, and which need attention this year?</p>
+<textarea class="pv" id="wp_systems"></textarea>
+<h2>Strategic Fundraising Goals</h2>
+<div class="wp-label">Goal #1</div>
+<div class="wp-auto" id="wp_goal_1"><br></div>
+<div id="wp_cm_wrap_1">
+<div class="wp-label">Champion or Process Metric Associated</div>
+<div class="wp-auto" id="wp_cm_1"><br></div>
+</div>
+<div class="wp-label">Goal #2</div>
+<div class="wp-auto" id="wp_goal_2"><br></div>
+<div id="wp_cm_wrap_2">
+<div class="wp-label">Champion or Process Metric Associated</div>
+<div class="wp-auto" id="wp_cm_2"><br></div>
+</div>
+<div class="wp-label">Goal #3</div>
+<div class="wp-auto" id="wp_goal_3"><br></div>
+<div id="wp_cm_wrap_3">
+<div class="wp-label">Champion or Process Metric Associated</div>
+<div class="wp-auto" id="wp_cm_3"><br></div>
+</div>
+<h2>Financial Goals</h2>
+<div class="tablewrap">
+<div class="dt dt-wpgoals" role="table" style="grid-template-columns:30% 25% 25% 20%">
+<div class="tr" role="row">
+<div class="th" role="columnheader">Income Streams</div>
+<div class="th num" role="columnheader">Current Year Target</div>
+<div class="th num" role="columnheader">Next Year's Income Projections</div>
+<div class="th num" role="columnheader">% of Change</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Major Gifts</div>
+<div class="td auto money" id="wpc_0" role="cell">£0</div>
+<div class="td auto money" id="wpd_0" role="cell">£0</div>
+<div class="td auto pct" id="wpe_0" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Monthly Giving</div>
+<div class="td auto money" id="wpc_1" role="cell">£0</div>
+<div class="td auto money" id="wpd_1" role="cell">£0</div>
+<div class="td auto pct" id="wpe_1" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Events</div>
+<div class="td auto money" id="wpc_2" role="cell">£0</div>
+<div class="td auto money" id="wpd_2" role="cell">£0</div>
+<div class="td auto pct" id="wpe_2" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Communications</div>
+<div class="td auto money" id="wpc_3" role="cell">£0</div>
+<div class="td auto money" id="wpd_3" role="cell">£0</div>
+<div class="td auto pct" id="wpe_3" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Trusts &amp; Foundations</div>
+<div class="td auto money" id="wpc_4" role="cell">£0</div>
+<div class="td auto money" id="wpd_4" role="cell">£0</div>
+<div class="td auto pct" id="wpe_4" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Churches</div>
+<div class="td auto money" id="wpc_5" role="cell">£0</div>
+<div class="td auto money" id="wpd_5" role="cell">£0</div>
+<div class="td auto pct" id="wpe_5" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Fees for Services</div>
+<div class="td auto money" id="wpc_6" role="cell">£0</div>
+<div class="td auto money" id="wpd_6" role="cell">£0</div>
+<div class="td auto pct" id="wpe_6" role="cell">n/a</div>
+</div>
+<div class="tr" role="row">
+<div class="td rowlabel" role="cell">Legacies &amp; Other</div>
+<div class="td auto money" id="wpc_7" role="cell">£0</div>
+<div class="td auto money" id="wpd_7" role="cell">£0</div>
+<div class="td auto pct" id="wpe_7" role="cell">n/a</div>
+</div>
+<div class="tr totalrow" role="row">
+<div class="td" role="cell">TOTAL</div>
+<div class="td num" id="wp_totc" role="cell">£0</div>
+<div class="td num" id="wp_totd" role="cell">£0</div>
+<div class="td" role="cell"><br></div>
+</div>
+</div>
+</div>
+<div class="wp-label">Fundraising Programme Budget</div>
+<div class="wp-auto" id="wp_progbudget"><br></div>
+<div class="wp-label">Quarterly Cash Flow</div>
+<div class="wp-auto" id="wp_cashflow_note"><br></div>
+<h2>Campaign Calendar</h2>
+<p class="ex">Use the calendar from Step 6, or summarise its major beats here in narrative form.</p>
+<textarea class="pv" id="wp_calendar"></textarea>
+<h2>Income Streams Narrative</h2>
+<p class="ex">In narrative form, list the major action steps and timelines listed in Step 6.</p>
+<textarea class="pv" id="wp_narr"></textarea>
+<h2>Review Process</h2>
+<p class="ex">Summarise the review plan developed in Step 7.</p>
+<textarea class="pv" id="wp_review"></textarea>
+<div class="wp-label">Success Metrics</div>
+<div class="wp-auto" id="wp_metrics"><br></div>
+<h2>Supplemental Resources</h2>
+<p class="ex">List any additional resources you will include. Examples: fundraising plan tactics, timeline and review worksheet; major gifts tracking spreadsheet; integrated ministry communication calendar; events calendar.</p>
+<textarea class="pv" id="wp_supp"></textarea>
+</div>
+</div>
+</section>
+<div class="help-block">
+<h3>Saving and Resuming Your Work</h3>
+<p>Nothing you type here is sent anywhere or saved automatically. Use the buttons above to keep your progress:</p>
+<ol>
+<li><b>Save (CSV / Excel)</b> downloads everything you've entered as one file, named for your ministry and today's date. It opens in Excel, Google Sheets, or Numbers if you ever want to look at the raw data, but you don't need to open it. Just keep the file somewhere you'll find it again, like a shared drive or your desktop.</li>
+<li><b>Import</b> loads a previously saved file back into this tool, exactly where you left off. Click Import, choose the CSV file you saved earlier, and every field will fill back in.</li>
+<li><b>Print draft plan</b> exports the finished, formatted plan from the Write Your Plan tab. Use this once your plan is complete and ready to share.</li>
+                <li><b>Print all steps</b> prints every step as a worksheet, with blank boxes for anything you haven't filled in yet, so a team can work through it on paper. In the print window, choose Save as PDF if you want a digital copy.</li>
+</ol>
+<p>Save often, especially before closing this page. If you're working on this with your Area Director or team, save a copy after each working session so everyone has the latest version.</p>
+</div>
+<footer class="note"> A Mission Increase UK tool for Champion Development. Learn more at <a href="https://www.missionincrease.org.uk">missionincrease.org.uk</a>.<br> Your entries stay on this device. Nothing is sent anywhere, and there is no login. </footer>
+</div>
+
+<script>
+        document.querySelectorAll(".stepbtn").forEach(function(b) {
+            b.addEventListener("click", function() {
+                document.querySelectorAll(".stepbtn").forEach(function(x) {
+                    x.classList.remove("active")
+                });
+                document.querySelectorAll(".substep").forEach(function(s) {
+                    s.classList.remove("active")
+                });
+                b.classList.add("active");
+                document.getElementById("sub-" + b.dataset.sub).classList.add("active");
+                document.getElementById("panel-fp").scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
+        });
+        /* ---------- Money helpers ---------- */
+        function parseNum(v) {
+            var n = parseFloat(String(v).replace(/[^0-9.\-]/g, ""));
+            return isNaN(n) ? 0 : n;
+        }
+
+        function fmtMoney(n) {
+            var r = Math.round(n); return (r < 0 ? "-£" : "£") + Math.abs(r).toLocaleString("en-GB");
+        }
+
+        function pct(num, den) {
+            return den === 0 ? "n/a" : (num / den * 100).toFixed(1) + "%";
+        }
+
+        function byId(id) {
+            return document.getElementById(id);
+        }
+
+        function valById(id) {
+            var e = byId(id);
+            return e ? e.value : "";
+        }
+
+        function getCells(k) {
+            var o = {};
+            document.querySelectorAll('[data-k="' + k + '"]').forEach(function(el) {
+                o[el.dataset.i] = parseNum(el.value);
+            });
+            return o;
+        }
+        var NS = 8;
+        /* ---------- Recompute all cross-cell formulas ---------- */
+        function recompute() {
+            // Step 3 totals + % of income
+            var b = getCells("s3b"),
+                c = getCells("s3c"),
+                d = getCells("s3d"),
+                e = getCells("s3e");
+            var tb = 0,
+                tc = 0,
+                td = 0,
+                te = 0;
+            for (var i = 0; i < NS; i++) {
+                tb += b[i] || 0;
+                tc += c[i] || 0;
+                td += d[i] || 0;
+                te += e[i] || 0;
+            }
+            byId("s3tot_b").textContent = fmtMoney(tb);
+            byId("s3tot_c").textContent = fmtMoney(tc);
+            byId("s3tot_d").textContent = fmtMoney(td);
+            byId("s3tot_e").textContent = fmtMoney(te);
+            for (i = 0; i < NS; i++) {
+                byId("s3f_" + i).textContent = pct(e[i] || 0, te);
+            }
+            // Step 4 -> Step 5 top, Step 6 goals, Write your Plan goals
+            for (var g = 1; g <= 3; g++) {
+                var gt = valById("s4goal_" + g),
+                    dc = parseNum(valById("s4dc_" + g)),
+                    cm = valById("s4cm_" + g);
+                byId("s5goaltop_" + g).textContent = gt;
+                byId("s5dctop_" + g).textContent = fmtMoney(dc);
+                byId("s6goal_" + g).textContent = gt;
+                byId("wp_goal_" + g).textContent = gt;
+                byId("wp_cm_" + g).textContent = cm;
+                byId("wp_cm_wrap_" + g).style.display = cm.trim() === "" ? "none" : "";
+            }
+            // Step 1 raise -> Step 5 revenue goal
+            var revenueGoal = parseNum(valById("s1_raise"));
+            byId("s5budget").textContent = fmtMoney(revenueGoal);
+            // Fundraising Program Budget vs revenue goal
+            var progBudget = parseNum(valById("s5progbudget"));
+            var progPctEl = byId("s5progpct");
+            progPctEl.classList.remove("good", "warn");
+            if (revenueGoal > 0) {
+                var ppct = progBudget / revenueGoal * 100;
+                progPctEl.textContent = ppct.toFixed(1) + "%";
+                progPctEl.classList.add((ppct >= 10 && ppct <= 25) ? "good" : "warn");
+            } else {
+                progPctEl.textContent = "n/a";
+            }
+            byId("wp_progbudget").textContent = progBudget ? fmtMoney(progBudget) : "";
+            // Step 5 main table
+            var dd = getCells("s5d");
+            var Dtot = 0,
+                Ctot = 0,
+                Etot = 0;
+            for (i = 0; i < NS; i++) {
+                var C = e[i] || 0,
+                    D = dd[i] || 0;
+                Ctot += C;
+                Dtot += D;
+                Etot += (D - C);
+            }
+            for (i = 0; i < NS; i++) {
+                var C = e[i] || 0,
+                    D = dd[i] || 0,
+                    E = D - C;
+                byId("s5c_" + i).textContent = fmtMoney(C);
+                byId("s5e_" + i).textContent = fmtMoney(E);
+                byId("s5f_" + i).textContent = pct(E, C);
+                byId("s5g_" + i).textContent = pct(D, Dtot);
+                byId("s6target_" + i).textContent = fmtMoney(D); // Step 5 D -> Step 6 target
+                byId("wpc_" + i).textContent = fmtMoney(C); // -> Write your Plan
+                byId("wpd_" + i).textContent = fmtMoney(D);
+                byId("wpe_" + i).textContent = pct(E, C);
+            }
+            byId("s5totc").textContent = fmtMoney(Ctot);
+            byId("s5totd").textContent = fmtMoney(Dtot);
+            byId("s5tote").textContent = fmtMoney(Etot);
+            byId("wp_totc").textContent = fmtMoney(Ctot);
+            byId("wp_totd").textContent = fmtMoney(Dtot);
+            // Step 1 -> Write your Plan vision/mission (wired to the correct input cells)
+            byId("wp_vision").textContent = valById("s1_vision");
+            byId("wp_mission").textContent = valById("s1_mission");
+            // Quarterly Cash Flow (Step 5)
+            var q1 = getCells("s5q1"),
+                q2 = getCells("s5q2"),
+                q3 = getCells("s5q3"),
+                q4 = getCells("s5q4");
+            var qcol1 = 0,
+                qcol2 = 0,
+                qcol3 = 0,
+                qcol4 = 0,
+                qcoltot = 0,
+                mismatches = [];
+            var STREAM_NAMES = [0, 1, 2, 3, 4, 5, 6, 7].map(function(i) {
+                return streamName(i);
+            });
+            for (i = 0; i < NS; i++) {
+                var Q1 = q1[i] || 0,
+                    Q2 = q2[i] || 0,
+                    Q3 = q3[i] || 0,
+                    Q4 = q4[i] || 0;
+                var rowtot = Q1 + Q2 + Q3 + Q4;
+                byId("s5qtot_" + i).textContent = fmtMoney(rowtot);
+                byId("s5qcheck_" + i).textContent = fmtMoney(dd[i] || 0);
+                if (Math.round(rowtot) !== Math.round(dd[i] || 0)) mismatches.push(STREAM_NAMES[i]);
+                qcol1 += Q1;
+                qcol2 += Q2;
+                qcol3 += Q3;
+                qcol4 += Q4;
+                qcoltot += rowtot;
+            }
+            byId("s5qcol_1").textContent = fmtMoney(qcol1);
+            byId("s5qcol_2").textContent = fmtMoney(qcol2);
+            byId("s5qcol_3").textContent = fmtMoney(qcol3);
+            byId("s5qcol_4").textContent = fmtMoney(qcol4);
+            byId("s5qcol_tot").textContent = fmtMoney(qcoltot);
+            var cfnote = byId("s5cashflownote");
+            if (mismatches.length) {
+                cfnote.innerHTML = "<b>Check these streams:</b> quarterly total doesn't match Next Year Target for " + mismatches.join(", ") + ".";
+            } else {
+                cfnote.innerHTML = "<b>Row Total</b> should match each stream's Next Year Target. Any mismatch shows here.";
+            }
+            byId("wp_cashflow_note").textContent = (qcoltot ? fmtMoney(qcoltot) : "£0") + " planned across all four quarters" + (mismatches.length ? " (note: " + mismatches.join(", ") + " don't yet add up to target)" : ".");
+            // Success Metrics summary (Step 7 -> Write your Plan)
+            var metricLines = [];
+            document.querySelectorAll("#metricrows .mrow").forEach(function(row) {
+                var inps = row.querySelectorAll("input,select");
+                var nm = inps[0] ? inps[0].value.trim() : "";
+                var ty = inps[1] ? inps[1].value : "";
+                var tg = inps[2] ? inps[2].value.trim() : "";
+                var fr = inps[3] ? inps[3].value.trim() : "";
+                if (nm) metricLines.push(nm + " (" + ty + (tg ? ", target " + tg : "") + (fr ? ", reviewed " + fr : "") + ")");
+            });
+            byId("wp_metrics").textContent = metricLines.join("\n");
+        }
+        /* listeners */
+        document.addEventListener("input", function(ev) {
+            var t = ev.target;
+            if (t.classList && (t.classList.contains("calc"))) recompute();
+        });
+        /* money formatting on blur */
+        document.addEventListener("blur", function(ev) {
+            var t = ev.target;
+            if (t.classList && t.classList.contains("money")) {
+                var n = parseNum(t.value);
+                t.value = t.value.trim() === "" ? "" : n.toLocaleString("en-GB");
+                recompute();
+            }
+        }, true);
+        /* rating colour */
+        document.addEventListener("change", function(ev) {
+            if (ev.target.classList && ev.target.classList.contains("rate")) {
+                ev.target.setAttribute("data-v", ev.target.value);
+            }
+        });
+        /* ---------- Repeatable rows (Step 6 actions, Step 7 reports) ---------- */
+        function mkInput(ph, type) {
+            var i = document.createElement(type === "textarea" ? "textarea" : "input");
+            if (type && type !== "textarea") i.type = type;
+            i.className = "pv";
+            if (ph) i.placeholder = ph;
+            return i;
+        }
+
+        function mkRemove(row, onEmpty) {
+            var b = document.createElement("button");
+            b.className = "rm";
+            b.type = "button";
+            b.textContent = "×";
+            b.title = "Remove";
+            b.addEventListener("click", function() {
+                var p = row.parentNode;
+                row.remove();
+                if (p.querySelectorAll(".frow").length === 0) onEmpty();
+            });
+            return b;
+        }
+
+        function s6row(mount) {
+            var row = document.createElement("div");
+            row.className = "frow";
+            row.appendChild(mkInput("Description & goals", "textarea"));
+            ["Accountable", "Participants"].forEach(function(p) {
+                row.appendChild(mkInput(p, "text"));
+            });
+            row.appendChild(mkInput("", "date"));
+            row.appendChild(mkInput("", "date"));
+            ["Progress", "Adjustments"].forEach(function(p) {
+                row.appendChild(mkInput(p, "text"));
+            });
+            row.appendChild(mkRemove(row, function() {
+                s6row(mount);
+            }));
+            mount.appendChild(row);
+        }
+        document.querySelectorAll("[data-s6]").forEach(function(m) {
+            s6row(m);
+        });
+        document.querySelectorAll("[data-add6]").forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                s6row(document.querySelector('[data-s6="' + btn.dataset.add6 + '"]'));
+            });
+        });
+
+        function s7row(name, freq, resp, rev) {
+            var mount = byId("s7rows");
+            var row = document.createElement("div");
+            row.className = "frow";
+            var f1 = mkInput("Example: Budget vs Actual", "text");
+            if (name) f1.value = name;
+            var f2 = mkInput("e.g., Monthly", "text");
+            if (freq) f2.value = freq;
+            var f3 = mkInput("Head of Fundraising", "text");
+            if (resp) f3.value = resp;
+            var f4 = mkInput("Chief Executive", "text");
+            if (rev) f4.value = rev;
+            row.appendChild(f1);
+            row.appendChild(f2);
+            row.appendChild(f3);
+            row.appendChild(f4);
+            row.appendChild(mkRemove(row, function() {
+                s7row();
+            }));
+            mount.appendChild(row);
+        }
+        s7row("Budget vs Actual", "Monthly", "Head of Fundraising", "Chief Executive");
+        s7row("Management Accounts (Income & Expenditure)", "Quarterly", "Finance Officer", "Chief Executive and Treasurer");
+        s7row("Champions by Giving Level", "Annually", "Head of Fundraising", "Chief Executive");
+        s7row("Communications Calendar", "Monthly", "Communications Lead", "Head of Fundraising");
+        byId("add7").addEventListener("click", function() {
+            s7row();
+        });
+        /* ---------- Campaign Calendar (Step 6) ---------- */
+        var CAL_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        function calRow(idx, month) {
+            var row = document.createElement("div");
+            row.className = "tr";
+            row.style.display = "contents";
+            row.setAttribute("role", "row");
+            row.dataset.calIdx = idx;
+            var td0 = document.createElement("div");
+            td0.className = "td rowlabel";
+            td0.setAttribute("role", "cell");
+            td0.textContent = month;
+            row.appendChild(td0);
+            var td1 = document.createElement("div");
+            td1.className = "td";
+            td1.setAttribute("role", "cell");
+            var t1 = document.createElement("textarea");
+            t1.className = "cell pv";
+            t1.placeholder = "Campaign or ask";
+            td1.appendChild(t1);
+            row.appendChild(td1);
+            var td2 = document.createElement("div");
+            td2.className = "td";
+            td2.setAttribute("role", "cell");
+            var t2 = document.createElement("textarea");
+            t2.className = "cell pv";
+            t2.placeholder = "Cultivation or stewardship";
+            td2.appendChild(t2);
+            row.appendChild(td2);
+            return row;
+        }
+        byId("calrows").textContent = "";
+        CAL_MONTHS.forEach(function(m, idx) {
+            byId("calrows").appendChild(calRow(idx, m));
+        });
+        /* ---------- Success Metrics (Step 7) ---------- */
+        function metricRow(name, type, target, freq) {
+            var row = document.createElement("div");
+            row.className = "mrow";
+            var nameInp = mkInput("Metric name", "text");
+            nameInp.classList.add("grow");
+            if (name) nameInp.value = name;
+            var typeSel = document.createElement("select");
+            typeSel.className = "pv";
+            ["Financial", "Relational"].forEach(function(o) {
+                var op = document.createElement("option");
+                op.value = o;
+                op.textContent = o;
+                typeSel.appendChild(op);
+            });
+            if (type) typeSel.value = type;
+            var targetInp = mkInput("Target", "text");
+            if (target) targetInp.value = target;
+            var freqInp = mkInput("e.g., Monthly", "text");
+            if (freq) freqInp.value = freq;
+            row.appendChild(nameInp);
+            row.appendChild(typeSel);
+            row.appendChild(targetInp);
+            row.appendChild(freqInp);
+            row.appendChild(mkRemove(row, function() {
+                recompute();
+            }));
+            row.addEventListener("input", recompute);
+            typeSel.addEventListener("change", recompute);
+            byId("metricrows").appendChild(row);
+        }
+        metricRow("Total raised", "Financial", "", "Monthly");
+        metricRow("Number of gifts", "Financial", "", "Monthly");
+        metricRow("Cost to raise £1", "Financial", "", "Quarterly");
+        metricRow("Gift Aid claimed", "Financial", "", "Quarterly");
+        metricRow("New champions added", "Relational", "", "Quarterly");
+        metricRow("Champion retention rate", "Relational", "", "Annually");
+        metricRow("Champions who moved from Participation to Engagement or Ownership", "Relational", "", "Annually");
+        byId("addmetric").addEventListener("click", function() {
+            metricRow("", "Financial", "", "");
+            recompute();
+        });
+        window.addEventListener("beforeprint", function() {
+            document.querySelectorAll("#sub-wp textarea, #ministry, #dt").forEach(function(el) {
+                var next = el.nextSibling;
+                if (!(next && next.className === "print-value")) {
+                    next = document.createElement("div");
+                    next.className = "print-value";
+                    el.parentNode.insertBefore(next, el.nextSibling);
+                }
+                next.textContent = (el.type === "date" && el.value) ? new Date(el.value + "T00:00:00").toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" }) : el.value.trim();
+            });
+        });
+        /* ---------- Print all steps ---------- */
+        window.addEventListener("beforeprint", function() {
+            document.querySelectorAll(".substep:not(#sub-wp) input, .substep:not(#sub-wp) textarea, .substep:not(#sub-wp) select").forEach(function(el) {
+                var next = el.nextSibling;
+                if (!(next && next.className === "print-value")) {
+                    next = document.createElement("div");
+                    next.className = "print-value";
+                    el.parentNode.insertBefore(next, el.nextSibling);
+                }
+                var text;
+                if (el.type === "date" && el.value) {
+                    text = new Date(el.value + "T00:00:00").toLocaleDateString("en-GB", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                    });
+                } else {
+                    text = el.value.trim();
+                }
+                next.textContent = text;
+                var row = el.closest(".frow");
+                if (row) {
+                    var cols = row.parentNode.id === "s7rows" ? S7COLS : S6COLS;
+                    var idx = Array.prototype.indexOf.call(row.querySelectorAll("input,textarea"), el);
+                    next.setAttribute("data-ph", cols[idx] || "");
+                }
+            });
+        });
+        var paBtn = byId("printAllBtn");
+        if (paBtn) {
+            paBtn.addEventListener("click", function() {
+                var w = paBtn.closest(".wrap");
+                w.classList.add("print-all");
+                var done = function() {
+                    w.classList.remove("print-all");
+                    window.removeEventListener("afterprint", done);
+                };
+                window.addEventListener("afterprint", done);
+                tryPrint(done);
+            });
+        }
+        byId("printBtn").addEventListener("click", function() {
+            byId("printBtn").closest(".wrap").classList.remove("print-all");
+            tryPrint();
+        });
+        function tryPrint(onBlocked) {
+            var fired = false;
+            var mark = function() { fired = true; };
+            window.addEventListener("beforeprint", mark);
+            var old = byId("printBlockedMsg");
+            if (old) old.remove();
+            try { window.print(); } catch (e) {}
+            setTimeout(function() {
+                window.removeEventListener("beforeprint", mark);
+                if (fired) return;
+                if (onBlocked) onBlocked();
+                var framed = false;
+                try { framed = window.self !== window.top; } catch (e) { framed = true; }
+                var msg = document.createElement("div");
+                msg.id = "printBlockedMsg";
+                msg.setAttribute("role", "alert");
+                msg.style.cssText = "background:#fff4e5;border:1px solid #f0d6a3;border-radius:12px;padding:14px 18px;margin:0 0 16px;font-size:14px;line-height:1.55;color:#323e48";
+                msg.innerHTML = "<strong>Your browser did not open the print window.</strong> " +
+                    (framed
+                        ? "This usually happens when the tool is shown inside another web page. Click <b>Save</b> first, then <a href=\"" + location.href + "\" target=\"_blank\" rel=\"noopener\" style=\"color:#5f8a00;font-weight:700\">open the tool in its own tab</a>, choose <b>Import</b> to load your file, and print from there."
+                        : "Try pressing Ctrl+P (Cmd+P on a Mac). If that does not work, check that pop-ups and printing are allowed for this site.");
+                var tb = document.querySelector(".toolbar");
+                tb.parentNode.insertBefore(msg, tb.nextSibling);
+                msg.scrollIntoView({ behavior: "smooth", block: "center" });
+            }, 700);
+        }
+        /* ---------- Save / Import (CSV, opens in Excel) ---------- */
+        var STREAMS_JS = ["Major Gifts", "Monthly Giving", "Events", "Communications", "Trusts & Foundations", "Churches", "Fees for Services", "Legacies & Other", "Goal-Focused"];
+        var S6COLS = ["Description & Goals", "Accountable", "Participants", "Start Date", "End Date", "Progress", "Adjustments"];
+        var S7COLS = ["Report Name", "Frequency", "Who Is Responsible?", "Who Reviews?"];
+        /* the fixed-structure fields, in stable document order */
+        function flatFields() {
+            var out = [];
+            document.querySelectorAll("input,textarea,select").forEach(function(el) {
+                if (el.type === "file" || el.type === "button") return;
+                if (el.closest("#chart")) return;
+                if (el.closest("#s7rows")) return;
+                if (el.closest("#calrows")) return;
+                if (el.closest("#metricrows")) return;
+                if (el.classList.contains("sname")) return;
+                if (el.closest("[data-s6]") && el.closest(".frow")) return;
+                out.push(el);
+            });
+            return out;
+        }
+
+        function labelFor(el) {
+            try {
+                if (el.classList.contains("rate")) {
+                    var it = el.closest(".rate-item"),
+                        st = el.closest(".rate-strat");
+                    return ((st && st.querySelector(".rate-title").textContent.trim()) + ": " + (it && it.querySelector(".rate-label").textContent.trim()));
+                }
+                var blk = el.closest(".blk");
+                if (blk && blk.querySelector("label")) return blk.querySelector("label").textContent.trim();
+                var tr = el.closest(".tr");
+                if (tr && tr.querySelector(".rowlabel")) return (tr.querySelector(".rowlabel .sname") ? tr.querySelector(".rowlabel .sname").value : tr.querySelector(".rowlabel").textContent).trim();
+                var fld = el.closest(".field");
+                if (fld && fld.querySelector("label")) return fld.querySelector("label").textContent.trim();
+                if (el.placeholder) return el.placeholder;
+            } catch (e) {}
+            return "";
+        }
+
+        function csvCell(s) {
+            s = String(s == null ? "" : s);
+            return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+        }
+
+        function toCSV(rows) {
+            return rows.map(function(r) {
+                return r.map(csvCell).join(",");
+            }).join("\r\n");
+        }
+
+        function parseCSV(text) {
+            if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
+            var rows = [],
+                row = [],
+                cur = "",
+                inq = false,
+                i = 0,
+                n = text.length;
+            while (i < n) {
+                var ch = text[i];
+                if (inq) {
+                    if (ch === '"') {
+                        if (text[i + 1] === '"') {
+                            cur += '"';
+                            i += 2;
+                            continue;
+                        }
+                        inq = false;
+                        i++;
+                        continue;
+                    }
+                    cur += ch;
+                    i++;
+                    continue;
+                }
+                if (ch === '"') {
+                    inq = true;
+                    i++;
+                    continue;
+                }
+                if (ch === ",") {
+                    row.push(cur);
+                    cur = "";
+                    i++;
+                    continue;
+                }
+                if (ch === "\r") {
+                    if (text[i + 1] === "\n") i++;
+                    row.push(cur);
+                    rows.push(row);
+                    row = [];
+                    cur = "";
+                    i++;
+                    continue;
+                }
+                if (ch === "\n") {
+                    row.push(cur);
+                    rows.push(row);
+                    row = [];
+                    cur = "";
+                    i++;
+                    continue;
+                }
+                cur += ch;
+                i++;
+            }
+            row.push(cur);
+            rows.push(row);
+            if (rows.length && rows[rows.length - 1].length === 1 && rows[rows.length - 1][0] === "") rows.pop();
+            return rows;
+        }
+
+        function collectRows() {
+            var rows = [
+                ["Field", "Label", "Value"]
+            ];
+            flatFields().forEach(function(el, i) {
+                rows.push(["fld_" + i, labelFor(el), el.value]);
+            });
+            document.querySelectorAll(".sname").forEach(function(el, si) {
+                rows.push(["stream|" + si, "Income stream " + (si + 1) + " name", el.value]);
+            });
+            // s6
+            document.querySelectorAll("[data-s6]").forEach(function(mount) {
+                var b = mount.dataset.s6;
+                mount.querySelectorAll(".frow").forEach(function(r, ri) {
+                    r.querySelectorAll("input,textarea").forEach(function(cc, col) {
+                        rows.push(["s6|" + b + "|" + ri + "|" + col, (b < NS ? streamName(b) : STREAMS_JS[b]) + " action " + (ri + 1) + " / " + S6COLS[col], cc.value]);
+                    });
+                });
+            });
+            byId("s7rows").querySelectorAll(".frow").forEach(function(r, ri) {
+                r.querySelectorAll("input,textarea").forEach(function(cc, col) {
+                    rows.push(["s7|" + ri + "|" + col, "Report " + (ri + 1) + " / " + S7COLS[col], cc.value]);
+                });
+            });
+            document.querySelectorAll("#calrows .tr").forEach(function(tr) {
+                var idx = tr.dataset.calIdx,
+                    tas = tr.querySelectorAll("textarea");
+                rows.push(["cal|" + idx + "|0", CAL_MONTHS[idx] + " / Campaign or Ask", tas[0].value]);
+                rows.push(["cal|" + idx + "|1", CAL_MONTHS[idx] + " / Cultivation or Stewardship", tas[1].value]);
+            });
+            document.querySelectorAll("#metricrows .mrow").forEach(function(r, ri) {
+                r.querySelectorAll("input,select").forEach(function(cc, col) {
+                    rows.push(["metric|" + ri + "|" + col, "Metric " + (ri + 1) + " / col " + col, cc.value]);
+                });
+            });
+            return rows;
+        }
+
+        function flash(msg) {
+            var m = byId("ioMsg");
+            m.textContent = msg;
+            setTimeout(function() {
+                if (m.textContent === msg) m.textContent = "";
+            }, 3500);
+        }
+
+        function saveCSV() {
+            var csv = "" + toCSV(collectRows());
+            var blob = new Blob([csv], {
+                type: "text/csv;charset=utf-8;"
+            });
+            var url = URL.createObjectURL(blob);
+            var slug = (valById("ministry") || "mission-increase-uk").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "mission-increase-uk";
+            var d = valById("dt") || new Date().toISOString().slice(0, 10);
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = slug + "-fundraising-plan-" + d + ".csv";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            flash("Saved.");
+        }
+
+        function applyImport(parsed) {
+            var map = new Map();
+            parsed.forEach(function(r, idx) {
+                if (idx === 0) return;
+                if (!r.length) return;
+                var v = r.length >= 3 ? r[2] : (r.length === 2 ? r[1] : "");
+                map.set(r[0], v);
+            });
+            // flat fields by stable order
+            flatFields().forEach(function(el, i) {
+                var k = "fld_" + i;
+                if (map.has(k)) {
+                    el.value = map.get(k);
+                    if (el.classList.contains("rate")) el.setAttribute("data-v", el.value);
+                }
+            });
+            document.querySelectorAll("[data-s6]").forEach(function(mount) {
+                var b = mount.dataset.s6,
+                    idxs = [];
+                map.forEach(function(v, k) {
+                    if (k.indexOf("s6|" + b + "|") === 0) idxs.push(parseInt(k.split("|")[2], 10));
+                });
+                var need6 = idxs.length ? Math.max.apply(null, idxs) + 1 : 0;
+                while (mount.querySelectorAll(".frow").length < need6) s6row(mount);
+                while (mount.querySelectorAll(".frow").length > need6) mount.querySelector(".frow:last-child").remove();
+                var rows6 = mount.querySelectorAll(".frow");
+                for (var r = 0; r < need6; r++) {
+                    var ctrls = rows6[r].querySelectorAll("input,textarea");
+                    for (var col = 0; col < ctrls.length; col++) {
+                        var key = "s6|" + b + "|" + r + "|" + col;
+                        if (map.has(key)) ctrls[col].value = map.get(key);
+                    }
+                }
+            });
+            // s7
+            var m7 = byId("s7rows"),
+                idx7 = [];
+            map.forEach(function(v, k) {
+                if (k.indexOf("s7|") === 0) idx7.push(parseInt(k.split("|")[1], 10));
+            });
+            var need7 = idx7.length ? Math.max.apply(null, idx7) + 1 : 0;
+            while (m7.querySelectorAll(".frow").length < need7) s7row();
+            while (m7.querySelectorAll(".frow").length > need7) m7.querySelector(".frow:last-child").remove();
+            var rows7 = m7.querySelectorAll(".frow");
+            for (var r = 0; r < need7; r++) {
+                var ctrls = rows7[r].querySelectorAll("input,textarea");
+                for (var col = 0; col < ctrls.length; col++) {
+                    var key = "s7|" + r + "|" + col;
+                    if (map.has(key)) ctrls[col].value = map.get(key);
+                }
+            }
+            // calendar (fixed 12 rows, always present)
+            document.querySelectorAll("#calrows .tr").forEach(function(tr) {
+                var idx = tr.dataset.calIdx,
+                    tas = tr.querySelectorAll("textarea");
+                var k0 = "cal|" + idx + "|0",
+                    k1 = "cal|" + idx + "|1";
+                if (map.has(k0)) tas[0].value = map.get(k0);
+                if (map.has(k1)) tas[1].value = map.get(k1);
+            });
+            // metrics (variable rows)
+            var mMount = byId("metricrows"),
+                idxM = [];
+            map.forEach(function(v, k) {
+                if (k.indexOf("metric|") === 0) idxM.push(parseInt(k.split("|")[1], 10));
+            });
+            var needM = idxM.length ? Math.max.apply(null, idxM) + 1 : 0;
+            while (mMount.querySelectorAll(".mrow").length < needM) metricRow("", "Financial", "", "");
+            while (mMount.querySelectorAll(".mrow").length > needM) mMount.querySelector(".mrow:last-child").remove();
+            var rowsM = mMount.querySelectorAll(".mrow");
+            for (var rm = 0; rm < needM; rm++) {
+                var ctrlsM = rowsM[rm].querySelectorAll("input,select");
+                for (var colM = 0; colM < ctrlsM.length; colM++) {
+                    var keyM = "metric|" + rm + "|" + colM;
+                    if (map.has(keyM)) ctrlsM[colM].value = map.get(keyM);
+                }
+            }
+            // income stream names (files saved before this feature have none, so they get the defaults)
+            var hasStreams = false;
+            document.querySelectorAll(".sname").forEach(function(el, si) {
+                if (map.has("stream|" + si)) hasStreams = true;
+            });
+            document.querySelectorAll(".sname").forEach(function(el, si) {
+                if (map.has("stream|" + si)) el.value = map.get("stream|" + si) || STREAM_DEFAULTS[si];
+                else if (!hasStreams) el.value = STREAM_DEFAULTS[si];
+            });
+            applyStreamNames();
+            // normalize money + recalc
+            document.querySelectorAll("input.money, textarea.money").forEach(function(el) {
+                if (el.value.trim() !== "") el.value = parseNum(el.value).toLocaleString("en-GB");
+            });
+            recompute();
+            flash("Plan loaded.");
+        }
+        byId("saveBtn").addEventListener("click", saveCSV);
+        byId("importBtn").addEventListener("click", function() {
+            byId("fileInput").click();
+        });
+        byId("fileInput").addEventListener("change", function(e) {
+            var f = e.target.files[0];
+            if (!f) return;
+            var rd = new FileReader();
+            rd.onload = function() {
+                var text = rd.result;
+                if (typeof text === "string" && text.slice(0, 2) === "PK") {
+                    alert("This looks like an .xlsx workbook. Please import the .csv file this tool saved. It opens in Excel as well.");
+                    byId("fileInput").value = "";
+                    return;
+                }
+                try {
+                    applyImport(parseCSV(text));
+                } catch (err) {
+                    alert("Sorry, that file could not be read as a saved plan.");
+                }
+                byId("fileInput").value = "";
+            };
+            rd.readAsText(f);
+        });
+        /* ---------- Editable income stream names ---------- */
+        var STREAM_DEFAULTS = [];
+        document.querySelectorAll(".dt-income .rowlabel").forEach(function(c) {
+            STREAM_DEFAULTS.push(c.textContent.trim());
+        });
+
+        function streamName(i) {
+            var el = document.querySelector('.sname[data-si="' + i + '"]');
+            var v = el ? el.value.trim() : "";
+            return v || STREAM_DEFAULTS[i];
+        }
+
+        function applyStreamNames() {
+            [".dt-financial .rowlabel", ".dt-cashflow .rowlabel", ".dt-wpgoals .rowlabel"].forEach(function(sel) {
+                document.querySelectorAll(sel).forEach(function(el, i) {
+                    if (i < NS) el.textContent = streamName(i);
+                });
+            });
+            document.querySelectorAll(".s6block .s6name").forEach(function(el, i) {
+                if (i < NS) el.textContent = streamName(i);
+            });
+        }
+        try {
+            document.querySelectorAll(".dt-income .rowlabel").forEach(function(cell, i) {
+                var inp = document.createElement("input");
+                inp.type = "text";
+                inp.className = "sname";
+                inp.maxLength = 40;
+                inp.value = STREAM_DEFAULTS[i];
+                inp.setAttribute("data-si", i);
+                inp.setAttribute("aria-label", "Income stream " + (i + 1) + " name");
+                inp.addEventListener("input", function() {
+                    applyStreamNames();
+                    recompute();
+                });
+                inp.addEventListener("blur", function() {
+                    if (inp.value.trim() === "") {
+                        inp.value = STREAM_DEFAULTS[i];
+                        applyStreamNames();
+                        recompute();
+                    }
+                });
+                cell.textContent = "";
+                cell.appendChild(inp);
+            });
+            var rs = byId("resetStreams");
+            if (rs) rs.addEventListener("click", function() {
+                document.querySelectorAll(".sname").forEach(function(el, i) {
+                    el.value = STREAM_DEFAULTS[i];
+                });
+                applyStreamNames();
+                recompute();
+            });
+        } catch (err) {
+            if (window.console) console.error("Income stream name setup failed", err);
+        }
+        /* default date */
+        (function() {
+            var d = new Date();
+            byId("dt").value = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+        })();
+        recompute();
+    </script>
+</section>
+</body>
+</html>
