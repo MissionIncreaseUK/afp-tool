@@ -1681,7 +1681,11 @@
                 page-break-inside: avoid
             }
         }
-    </style>
+    
+.dt .tr.xs:not(.on), .s6block.xs:not(.on) { display: none !important }
+.rowlabel .xs-rm { margin-left: 6px; flex: 0 0 auto }
+#addStream[disabled] { opacity: .55; cursor: default }
+</style>
 
 <div class="wrap">
 <header class="masthead">
@@ -2310,6 +2314,38 @@
 <div class="td" role="cell"><input class="cell money pv calc" data-i="7" data-k="s3e"></div>
 <div class="td auto pct" id="s3f_7" role="cell">n/a</div>
 </div>
+<div class="tr xs" role="row" data-xs="8">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="8" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="8" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="8" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="8" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_8" role="cell">n/a</div>
+</div>
+<div class="tr xs" role="row" data-xs="9">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="9" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="9" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="9" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="9" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_9" role="cell">n/a</div>
+</div>
+<div class="tr xs" role="row" data-xs="10">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="10" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="10" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="10" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="10" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_10" role="cell">n/a</div>
+</div>
+<div class="tr xs" role="row" data-xs="11">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td" role="cell"><input class="cell money pv" data-i="11" data-k="s3b"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="11" data-k="s3c"></div>
+<div class="td" role="cell"><input class="cell money pv" data-i="11" data-k="s3d"></div>
+<div class="td" role="cell"><input class="cell money pv calc" data-i="11" data-k="s3e"></div>
+<div class="td auto pct" id="s3f_11" role="cell">n/a</div>
+</div>
 <div class="tr totalrow" role="row">
 <div class="td" role="cell">TOTAL</div>
 <div class="td num" id="s3tot_b" role="cell">£0</div>
@@ -2321,8 +2357,8 @@
 </div>
 </div>
 <p class="autonote"><b>Total % of Income</b> auto-calculates as each stream's Current Year Target divided by the target total.</p>
-                    <p class="autonote afp-noprint"><b>Rename an income stream</b> by typing over its name in the first column. Your names carry through every step and into your plan, and the calculations stay the same.</p>
-                    <button class="addrow" type="button" id="resetStreams">Reset names to defaults</button>
+                    <p class="autonote afp-noprint"><b>Rename an income stream</b> by typing over its name in the first column. Your names carry through every step and into your plan, and the calculations stay the same. <b>Need another line</b>, such as Gift Aid or legacies? Click <b>Add income stream</b> (up to four). It appears in Steps 3, 5 and 6 and in your plan.</p>
+                    <button class="addrow" type="button" id="addStream">+ Add income stream</button> <button class="addrow" type="button" id="resetStreams">Reset names to defaults</button>
 <div class="twonotes">
 <div class="blk"><label>What gift anomalies do you need to account for?</label><textarea class="field-in pv"></textarea></div>
 <div class="blk"><label>What historical trends do we need to account for?</label><textarea class="field-in pv"></textarea></div>
@@ -2487,7 +2523,7 @@
 </div>
 </div>
 <div class="budgetstat"><span class="v" id="s5budget">£0</span> <span class="k">Next Year's Revenue Goal</span></div>
-<div class="parttitle">Fundraising Programme Budget<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">What it will cost to run this fundraising programme next year: staff time, events, communications, database, travel. Mi's guide is that well-run programmes spend roughly 10p to 25p for every £1 raised. This is investment, not waste.</span></span></div>
+<div class="parttitle">Fundraising Programme Budget<span class="tip-wrap" tabindex="0"><span class="tip-icon">?</span><span class="tip-box">What it will cost to run this fundraising programme next year: staff time, events, communications, database, travel. Mi's guide is that well-run programmes spend roughly 10p to 25p for every £1 raised. Events and trading usually cost more per £1 than trusts or major gifts. This is investment, not waste.</span></span></div>
 <p class="prayer">This is a different number from your revenue goal above. It's what you'll spend to raise it.</p>
 <div class="blk" style="max-width:280px"><label>Fundraising Programme Budget</label><span class="dwrap"><input class="field-in money calc" id="s5progbudget" placeholder="0" type="text"></span></div>
 <p class="autonote">Programme Budget as a share of your Revenue Goal: <b><span class="pctflag" id="s5progpct">n/a</span></b>. Healthy range is 10%-25%.</p>
@@ -2573,6 +2609,42 @@
 <div class="td auto pct" id="s5f_7" role="cell">n/a</div>
 <div class="td" role="cell"><input class="cell pv" data-i="7" data-k="s5rat" placeholder="Rationale"></div>
 <div class="td auto pct" id="s5g_7" role="cell">n/a</div>
+</div>
+<div class="tr xs" role="row" data-xs="8">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td auto money" id="s5c_8" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="8" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_8" role="cell">£0</div>
+<div class="td auto pct" id="s5f_8" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="8" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_8" role="cell">n/a</div>
+</div>
+<div class="tr xs" role="row" data-xs="9">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td auto money" id="s5c_9" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="9" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_9" role="cell">£0</div>
+<div class="td auto pct" id="s5f_9" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="9" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_9" role="cell">n/a</div>
+</div>
+<div class="tr xs" role="row" data-xs="10">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td auto money" id="s5c_10" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="10" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_10" role="cell">£0</div>
+<div class="td auto pct" id="s5f_10" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="10" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_10" role="cell">n/a</div>
+</div>
+<div class="tr xs" role="row" data-xs="11">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td auto money" id="s5c_11" role="cell">£0</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="11" data-k="s5d"></span></div>
+<div class="td auto money" id="s5e_11" role="cell">£0</div>
+<div class="td auto pct" id="s5f_11" role="cell">n/a</div>
+<div class="td" role="cell"><input class="cell pv" data-i="11" data-k="s5rat" placeholder="Rationale"></div>
+<div class="td auto pct" id="s5g_11" role="cell">n/a</div>
 </div>
 <div class="tr totalrow" role="row">
 <div class="td" role="cell">TOTAL</div>
@@ -2671,6 +2743,42 @@
 <div class="td auto money" id="s5qtot_7" role="cell">£0</div>
 <div class="td auto money" id="s5qcheck_7" role="cell">£0</div>
 </div>
+<div class="tr xs" role="row" data-xs="8">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="8" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="8" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="8" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="8" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_8" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_8" role="cell">£0</div>
+</div>
+<div class="tr xs" role="row" data-xs="9">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="9" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="9" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="9" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="9" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_9" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_9" role="cell">£0</div>
+</div>
+<div class="tr xs" role="row" data-xs="10">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="10" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="10" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="10" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="10" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_10" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_10" role="cell">£0</div>
+</div>
+<div class="tr xs" role="row" data-xs="11">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="11" data-k="s5q1"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="11" data-k="s5q2"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="11" data-k="s5q3"></span></div>
+<div class="td" role="cell"><span class="dwrap"><input class="cell money pv calc" data-i="11" data-k="s5q4"></span></div>
+<div class="td auto money" id="s5qtot_11" role="cell">£0</div>
+<div class="td auto money" id="s5qcheck_11" role="cell">£0</div>
+</div>
 <div class="tr totalrow" role="row">
 <div class="td" role="cell">TOTAL</div>
 <div class="td num" id="s5qcol_1" role="cell">£0</div>
@@ -2745,6 +2853,26 @@
 <div class="s6head"><span class="s6name">Legacies &amp; Other</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_7">£0</strong></span></div>
 <div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
 <div class="s6rows" data-s6="7"><br></div><button class="addrow" data-add6="7" type="button">+ Add action step</button>
+</div>
+<div class="s6block xs" data-xs="8">
+<div class="s6head"><span class="s6name">New income stream</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_8">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="10"><br></div><button class="addrow" data-add6="10" type="button">+ Add action step</button>
+</div>
+<div class="s6block xs" data-xs="9">
+<div class="s6head"><span class="s6name">New income stream</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_9">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="11"><br></div><button class="addrow" data-add6="11" type="button">+ Add action step</button>
+</div>
+<div class="s6block xs" data-xs="10">
+<div class="s6head"><span class="s6name">New income stream</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_10">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="12"><br></div><button class="addrow" data-add6="12" type="button">+ Add action step</button>
+</div>
+<div class="s6block xs" data-xs="11">
+<div class="s6head"><span class="s6name">New income stream</span><span class="s6tgt">TARGET <strong class="auto money" id="s6target_11">£0</strong></span></div>
+<div class="list-headrow s6cols"><span class="grow">Description &amp; Goals</span><span>Accountable</span><span>Participants</span><span>Start Date</span><span>End Date</span><span>Progress</span><span>Adjustments</span></div>
+<div class="s6rows" data-s6="13"><br></div><button class="addrow" data-add6="13" type="button">+ Add action step</button>
 </div>
 <div class="s6block">
 <div class="s6head"><span class="s6name">Goal-Focused Action Steps</span><span class="s6tgt" style="color:var(--muted);font-weight:400">Not tied to a specific income stream</span></div>
@@ -2881,6 +3009,30 @@
 <div class="td auto money" id="wpd_7" role="cell">£0</div>
 <div class="td auto pct" id="wpe_7" role="cell">n/a</div>
 </div>
+<div class="tr xs" role="row" data-xs="8">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td auto money" id="wpc_8" role="cell">£0</div>
+<div class="td auto money" id="wpd_8" role="cell">£0</div>
+<div class="td auto pct" id="wpe_8" role="cell">n/a</div>
+</div>
+<div class="tr xs" role="row" data-xs="9">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td auto money" id="wpc_9" role="cell">£0</div>
+<div class="td auto money" id="wpd_9" role="cell">£0</div>
+<div class="td auto pct" id="wpe_9" role="cell">n/a</div>
+</div>
+<div class="tr xs" role="row" data-xs="10">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td auto money" id="wpc_10" role="cell">£0</div>
+<div class="td auto money" id="wpd_10" role="cell">£0</div>
+<div class="td auto pct" id="wpe_10" role="cell">n/a</div>
+</div>
+<div class="tr xs" role="row" data-xs="11">
+<div class="td rowlabel" role="cell">New income stream</div>
+<div class="td auto money" id="wpc_11" role="cell">£0</div>
+<div class="td auto money" id="wpd_11" role="cell">£0</div>
+<div class="td auto pct" id="wpe_11" role="cell">n/a</div>
+</div>
 <div class="tr totalrow" role="row">
 <div class="td" role="cell">TOTAL</div>
 <div class="td num" id="wp_totc" role="cell">£0</div>
@@ -2971,7 +3123,7 @@
             });
             return o;
         }
-        var NS = 8;
+        var NS = 12; /* 8 standard streams + 4 optional extras (Mi UK) */
         /* ---------- Recompute all cross-cell formulas ---------- */
         function recompute() {
             // Step 3 totals + % of income
@@ -3067,7 +3219,7 @@
                 qcol4 = 0,
                 qcoltot = 0,
                 mismatches = [];
-            var STREAM_NAMES = [0, 1, 2, 3, 4, 5, 6, 7].map(function(i) {
+            var STREAM_NAMES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(function(i) {
                 return streamName(i);
             });
             for (i = 0; i < NS; i++) {
@@ -3381,6 +3533,7 @@
                 if (el.closest("#metricrows")) return;
                 if (el.classList.contains("sname")) return;
                 if (el.closest("[data-s6]") && el.closest(".frow")) return;
+                if (el.closest(".xs")) return; /* extra streams save under their own keys */
                 out.push(el);
             });
             return out;
@@ -3487,12 +3640,18 @@
             document.querySelectorAll(".sname").forEach(function(el, si) {
                 rows.push(["stream|" + si, "Income stream " + (si + 1) + " name", el.value]);
             });
+            XS.forEach(function(i) {
+                if (xsOn(i)) rows.push(["xson|" + i, "Extra income stream " + (i - 7) + " in use", "1"]);
+            });
+            document.querySelectorAll(".tr.xs [data-k]").forEach(function(el) {
+                rows.push(["xs|" + el.dataset.k + "|" + el.dataset.i, streamName(+el.dataset.i) + " / " + el.dataset.k, el.value]);
+            });
             // s6
             document.querySelectorAll("[data-s6]").forEach(function(mount) {
                 var b = mount.dataset.s6;
                 mount.querySelectorAll(".frow").forEach(function(r, ri) {
                     r.querySelectorAll("input,textarea").forEach(function(cc, col) {
-                        rows.push(["s6|" + b + "|" + ri + "|" + col, (b < NS ? streamName(b) : STREAMS_JS[b]) + " action " + (ri + 1) + " / " + S6COLS[col], cc.value]);
+                        rows.push(["s6|" + b + "|" + ri + "|" + col, s6label(b) + " action " + (ri + 1) + " / " + S6COLS[col], cc.value]);
                     });
                 });
             });
@@ -3618,6 +3777,12 @@
                     if (map.has(keyM)) ctrlsM[colM].value = map.get(keyM);
                 }
             }
+            // extra income streams (files saved before this feature have none, so all stay hidden)
+            XS.forEach(function(i) { setXs(i, map.get("xson|" + i) === "1"); });
+            document.querySelectorAll(".tr.xs [data-k]").forEach(function(el) {
+                var kx = "xs|" + el.dataset.k + "|" + el.dataset.i;
+                el.value = map.has(kx) ? map.get(kx) : "";
+            });
             // income stream names (files saved before this feature have none, so they get the defaults)
             var hasStreams = false;
             document.querySelectorAll(".sname").forEach(function(el, si) {
@@ -3628,6 +3793,7 @@
                 else if (!hasStreams) el.value = STREAM_DEFAULTS[si];
             });
             applyStreamNames();
+            updateAddBtn();
             // normalize money + recalc
             document.querySelectorAll("input.money, textarea.money").forEach(function(el) {
                 if (el.value.trim() !== "") el.value = parseNum(el.value).toLocaleString("en-GB");
@@ -3714,6 +3880,72 @@
             });
         } catch (err) {
             if (window.console) console.error("Income stream name setup failed", err);
+        }
+        /* ---------- Extra income streams (Mi UK) ---------- */
+        var XS = [8, 9, 10, 11];
+        function s6label(b) {
+            b = +b;
+            if (b < 8) return streamName(b);
+            if (b === 8) return STREAMS_JS[8];
+            return streamName(b - 2);
+        }
+        function xsEls(i) { return document.querySelectorAll('[data-xs="' + i + '"]'); }
+        function xsOn(i) {
+            var r = document.querySelector('.dt-income .tr[data-xs="' + i + '"]');
+            return !!(r && r.classList.contains("on"));
+        }
+        function setXs(i, on) { xsEls(i).forEach(function(el) { el.classList.toggle("on", !!on); }); }
+        function updateAddBtn() {
+            var b = byId("addStream");
+            if (!b) return;
+            var left = XS.filter(function(i) { return !xsOn(i); }).length;
+            b.disabled = left === 0;
+            b.textContent = left ? "+ Add income stream" : "Four extra streams in use";
+        }
+        function clearXs(i) {
+            xsEls(i).forEach(function(el) {
+                el.querySelectorAll("input,textarea").forEach(function(c) { if (!c.classList.contains("sname")) c.value = ""; });
+                el.querySelectorAll(".frow").forEach(function(r) { r.remove(); });
+            });
+            var n = document.querySelector('.sname[data-si="' + i + '"]');
+            if (n) n.value = STREAM_DEFAULTS[i];
+            setXs(i, false);
+            applyStreamNames();
+            recompute();
+            updateAddBtn();
+        }
+        try {
+            byId("addStream").addEventListener("click", function() {
+                for (var k = 0; k < XS.length; k++) {
+                    var i = XS[k];
+                    if (!xsOn(i)) {
+                        setXs(i, true);
+                        var n = document.querySelector('.sname[data-si="' + i + '"]');
+                        if (n) { n.select(); n.focus(); }
+                        applyStreamNames();
+                        recompute();
+                        updateAddBtn();
+                        return;
+                    }
+                }
+            });
+            XS.forEach(function(i) {
+                var cell = document.querySelector('.dt-income .tr[data-xs="' + i + '"] .rowlabel');
+                if (!cell) return;
+                var rm = document.createElement("button");
+                rm.type = "button";
+                rm.className = "rm xs-rm";
+                rm.textContent = "\u00d7";
+                rm.title = "Remove this income stream";
+                rm.setAttribute("aria-label", "Remove this income stream");
+                rm.addEventListener("click", function() { clearXs(i); });
+                cell.style.display = "flex";
+                cell.style.alignItems = "center";
+                cell.appendChild(rm);
+            });
+            updateAddBtn();
+        } catch (err) {
+            if (window.console) console.error("Extra income stream setup failed", err);
         }
         /* default date */
         (function() {
