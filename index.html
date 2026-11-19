@@ -1682,6 +1682,11 @@
             }
         }
     
+.rate-title { display: flex; justify-content: space-between; align-items: center; gap: 10px }
+.rt-score { font-size: 12px; font-weight: 800; white-space: nowrap; background: var(--mi-green); color: #fff; border-radius: 99px; padding: 2px 9px; letter-spacing: 0 }
+.rt-score:empty { display: none }
+.rt-score .rt-done { font-weight: 600; opacity: .9; margin-left: 4px }
+
 .dt .tr.xs:not(.on), .s6block.xs:not(.on) { display: none !important }
 .rowlabel .xs-rm { margin-left: 6px; flex: 0 0 auto }
 #addStream[disabled] { opacity: .55; cursor: default }
@@ -1789,7 +1794,7 @@
 <div class="ratewrap">
 <div>
 <div class="rate-strat">
-<div class="rate-title">MAJOR GIFTS</div>
+<div class="rate-title"><span class="rt-name">MAJOR GIFTS</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label">Actively identifying potential major givers</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -1820,7 +1825,7 @@
 </select></div>
 </div>
 <div class="rate-strat">
-<div class="rate-title">MONTHLY GIVING PROGRAMME</div>
+<div class="rate-title"><span class="rt-name">MONTHLY GIVING PROGRAMME</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label">Programme established with a clear identity and name, including supporting systems such as Direct Debit</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -1851,7 +1856,7 @@
 </select></div>
 </div>
 <div class="rate-strat">
-<div class="rate-title">COMMUNICATIONS</div>
+<div class="rate-title"><span class="rt-name">COMMUNICATIONS &amp; SUPPORTER RELATIONS</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label" title="States the problem, solution, impact, and invitation">Clear, compelling Case for Support</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -1896,7 +1901,7 @@
 </select></div>
 </div>
 <div class="rate-strat">
-<div class="rate-title">ACQUISITION EVENTS</div>
+<div class="rate-title"><span class="rt-name">ACQUISITION EVENTS</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label">Large-scale events with champions actively inviting new guests, not just attending</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -1927,7 +1932,7 @@
 </select></div>
 </div>
 <div class="rate-strat">
-<div class="rate-title">CHURCH ENGAGEMENT</div>
+<div class="rate-title"><span class="rt-name">CHURCH ENGAGEMENT</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label">Actively identifying churches aligned with our mission and cause</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -1960,7 +1965,7 @@
 </div>
 <div>
 <div class="rate-strat">
-<div class="rate-title">TRUSTS, FOUNDATIONS &amp; GRANTS</div>
+<div class="rate-title"><span class="rt-name">TRUSTS, FOUNDATIONS &amp; GRANTS</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label">Researching mission-aligned grant-makers</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -1998,7 +2003,7 @@
 </select></div>
 </div>
 <div class="rate-strat">
-<div class="rate-title">BUSINESS ENGAGEMENT</div>
+<div class="rate-title"><span class="rt-name">BUSINESS ENGAGEMENT</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label">Actively identifying businesses aligned with our mission and cause</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -2022,7 +2027,7 @@
 </select></div>
 </div>
 <div class="rate-strat">
-<div class="rate-title">LEGACY GIFTS</div>
+<div class="rate-title"><span class="rt-name">LEGACY GIFTS</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label" title="Gifts in Wills: residuary, pecuniary and in-memory gifts">Leadership understands the basics of legacy giving (gifts in Wills) and when it may become relevant</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -2046,7 +2051,7 @@
 </select></div>
 </div>
 <div class="rate-strat">
-<div class="rate-title">FEES FOR SERVICES</div>
+<div class="rate-title"><span class="rt-name">FEES FOR SERVICES</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label">Selling merchandise connected to our mission</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -2070,7 +2075,7 @@
 </select></div>
 </div>
 <div class="rate-strat">
-<div class="rate-title">GIFTS IN KIND</div>
+<div class="rate-title"><span class="rt-name">GIFTS IN KIND</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label">Actively receiving and stewarding donated items</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -2094,7 +2099,7 @@
 </select></div>
 </div>
 <div class="rate-strat">
-<div class="rate-title">CHARITY LEADERSHIP</div>
+<div class="rate-title"><span class="rt-name">CHARITY LEADERSHIP</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label">Charity-wide adoption of biblical fundraising principles</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -2139,7 +2144,7 @@
 </select></div>
 </div>
 <div class="rate-strat">
-<div class="rate-title">FUNDRAISING OPERATIONS</div>
+<div class="rate-title"><span class="rt-name">FUNDRAISING OPERATIONS</span><span class="rt-score" aria-live="polite"></span></div>
 <div class="rate-item"><span class="rate-label">A P-E-O structure embedded across fundraising activities</span><select class="rate pv">
 <option disabled="" selected="" value="">RATE</option>
 <option>0</option>
@@ -3125,7 +3130,22 @@
         }
         var NS = 12; /* 8 standard streams + 4 optional extras (Mi UK) */
         /* ---------- Recompute all cross-cell formulas ---------- */
+        /* Step 2 system scores (Mi UK): points scored as a % of the maximum (3 per item); unrated items count as 0 */
+        function updateSystemScores() {
+            document.querySelectorAll(".rate-strat").forEach(function(st) {
+                var sels = st.querySelectorAll("select.rate"), out = st.querySelector(".rt-score");
+                if (!out) return;
+                var sum = 0, rated = 0;
+                sels.forEach(function(s) { if (s.value !== "") { rated++; sum += +s.value; } });
+                if (!rated) { out.textContent = ""; return; }
+                var pct = Math.round(sum / (sels.length * 3) * 100);
+                out.innerHTML = pct + "%" + (rated < sels.length ? '<span class="rt-done">(' + rated + " of " + sels.length + " rated)</span>" : "");
+                out.title = sum + " of " + (sels.length * 3) + " points";
+            });
+        }
+        document.addEventListener("change", function(ev) { if (ev.target && ev.target.matches && ev.target.matches("select.rate")) updateSystemScores(); });
         function recompute() {
+            try { updateSystemScores(); } catch (e) {}
             // Step 3 totals + % of income
             var b = getCells("s3b"),
                 c = getCells("s3c"),
@@ -3544,7 +3564,7 @@
                 if (el.classList.contains("rate")) {
                     var it = el.closest(".rate-item"),
                         st = el.closest(".rate-strat");
-                    return ((st && st.querySelector(".rate-title").textContent.trim()) + ": " + (it && it.querySelector(".rate-label").textContent.trim()));
+                    return ((st && st.querySelector(".rate-title .rt-name").textContent.trim()) + ": " + (it && it.querySelector(".rate-label").textContent.trim()));
                 }
                 var blk = el.closest(".blk");
                 if (blk && blk.querySelector("label")) return blk.querySelector("label").textContent.trim();
